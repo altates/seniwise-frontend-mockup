@@ -1,0 +1,3829 @@
+[
+  {
+    "profile": {
+      "uuid": "b509eecf-a343-431c-9319-46f02891111a",
+      "active": true,
+      "created_at": "2022-07-18T08:54:58Z",
+      "updated_at": "2023-08-17T05:04:49Z",
+      "created_by": "reha",
+      "updated_by": "mehmet",
+      "first_name": "Ahmet",
+      "last_name": "Eren",
+      "date_of_birth": "1945-02-05",
+      "birthplace": "Bursa",
+      "nationality": "TR",
+      "identification_number": "16155940781",
+      "address": "Yesilova Mah, Cumhuriyet Sk. No:107 D:40, Trabzon",
+      "blood_type": "b rh-",
+      "home_phone": "2160341316",
+      "mobile_phone": "5017525534",
+      "gender": "male",
+      "responsible_staff": "atesh",
+      "image": "/api/residents/b509eecf-a343-431c-9319-46f02891111a/image",
+      "image_file": "male-3.jpg",
+      "room": null
+    },
+    "health": {
+      "independence": "independent",
+      "mobility": "normal",
+      "motor_function": "normal-hand-function",
+      "cognitive_status": "normal-cognition",
+      "chronic_illness": "",
+      "medications": "",
+      "allergies": "Penicillin.",
+      "medical_history": "Fall-related fracture in 2021.",
+      "relatives": "Elif Eren (daughter) - elif.eren@example.com; Hatice Eren (daughter) - 5018733311; Selin Eren (cousin)",
+      "vision": "impaired",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": true,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2024-05-14T01:09:25Z",
+        "user_id": "reha",
+        "fields": [
+          "profile.phone"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-10-18T23:13:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "regular-meals"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "95%"
+          },
+          {
+            "key": "medication-administration"
+          }
+        ]
+      },
+      {
+        "date": "2026-01-03T10:11:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "temperature",
+            "value": "36.9 C"
+          },
+          {
+            "key": "wound-care-dressing"
+          },
+          {
+            "key": "iv-nutrition"
+          }
+        ]
+      },
+      {
+        "date": "2025-10-05T12:42:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "oxygen-saturation",
+            "value": "97%"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          },
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "regular-meals"
+          },
+          {
+            "key": "temperature",
+            "value": "38.1 C"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "3a99eee1-7d17-4c1e-83f1-15ffc4546f79",
+      "active": true,
+      "created_at": "2022-10-09T14:36:21Z",
+      "updated_at": "2023-10-02T02:24:35Z",
+      "created_by": "atesh",
+      "updated_by": "mehmet",
+      "first_name": "Ibrahim",
+      "last_name": "Kaya",
+      "date_of_birth": "1930-07-08",
+      "birthplace": "Bursa",
+      "nationality": "TR",
+      "identification_number": "84514627048",
+      "address": "Yeni Mahalle, Istiklal Sk. No:112 D:20, Konya",
+      "blood_type": "a rh-",
+      "home_phone": null,
+      "mobile_phone": "5378809570",
+      "gender": "male",
+      "responsible_staff": "huseyin",
+      "image": "/api/residents/3a99eee1-7d17-4c1e-83f1-15ffc4546f79/image",
+      "image_file": "male-3.jpg",
+      "room": "C-104"
+    },
+    "health": {
+      "independence": "partial-assistance",
+      "mobility": "wheelchair-dependent",
+      "motor_function": "limited-hand-function",
+      "cognitive_status": "mild-cognitive-impairment",
+      "chronic_illness": "Type 2 diabetes and hypertension.",
+      "medications": "Warfarin, furosemide.",
+      "allergies": "Seafood.",
+      "medical_history": "Hip replacement in 2016.",
+      "relatives": "Ali Kaya (son)",
+      "vision": "blind",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": true,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-10-07T07:44:29Z",
+        "user_id": "huseyin",
+        "fields": [
+          "equipment_used.oxygen",
+          "health.mobility"
+        ]
+      },
+      {
+        "date": "2022-10-20T09:38:38Z",
+        "user_id": "atesh",
+        "fields": [
+          "equipment_used.oxygen"
+        ]
+      },
+      {
+        "date": "2023-06-23T21:17:02Z",
+        "user_id": "huseyin",
+        "fields": [
+          "health.mobility",
+          "health.independence",
+          "profile.phone"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-12-26T23:31:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "nail-care"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "92%"
+          },
+          {
+            "key": "companionship-emotional-support"
+          },
+          {
+            "key": "meal-refused"
+          },
+          {
+            "key": "laundry-clothing-care"
+          },
+          {
+            "key": "injections-iv-therapy"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-01T02:39:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "oxygen-saturation",
+            "value": "98%"
+          },
+          {
+            "key": "room-cleaning-tidying"
+          },
+          {
+            "key": "injections-iv-therapy"
+          },
+          {
+            "key": "assisted-walking"
+          },
+          {
+            "key": "bed-linen-changes"
+          },
+          {
+            "key": "wheelchair-use"
+          }
+        ]
+      },
+      {
+        "date": "2025-08-26T07:43:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "room-cleaning-tidying"
+          },
+          {
+            "key": "assisted-walking"
+          },
+          {
+            "key": "nail-care"
+          },
+          {
+            "key": "wound-care-dressing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "1e8f8238-9499-41de-ad22-367ddc3bfb7c",
+      "active": true,
+      "created_at": "2023-05-17T07:42:40Z",
+      "updated_at": "2024-07-06T07:19:25Z",
+      "created_by": "korhan",
+      "updated_by": "huseyin",
+      "first_name": "Ceren",
+      "last_name": "Acar",
+      "date_of_birth": "1948-04-05",
+      "birthplace": "Adana",
+      "nationality": "TR",
+      "identification_number": "11656670106",
+      "address": "Gultepe Mah, Cumhuriyet Sk. No:25 D:13, Mersin",
+      "blood_type": "ab rh-",
+      "home_phone": null,
+      "mobile_phone": "5374731781",
+      "gender": "female",
+      "responsible_staff": "huseyin",
+      "image": "/api/residents/1e8f8238-9499-41de-ad22-367ddc3bfb7c/image",
+      "image_file": "female-3.jpg",
+      "room": null
+    },
+    "health": {
+      "independence": "full-care",
+      "mobility": "normal",
+      "motor_function": "fine-motor-difficulty",
+      "cognitive_status": "dementia-alzheimers-symptoms",
+      "chronic_illness": "Type 2 diabetes and hypertension.",
+      "medications": "",
+      "allergies": "Seasonal pollen.",
+      "medical_history": "Appendectomy in 1980.",
+      "relatives": "Omer Acar (son) - omer.acar@example.com",
+      "vision": "normal",
+      "hearing": "impaired"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": true,
+      "chemotherapy_port": true,
+      "cochlear_implant": true,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2024-02-04T15:57:02Z",
+        "user_id": "mehmet",
+        "fields": [
+          "profile.address",
+          "profile.phone"
+        ]
+      },
+      {
+        "date": "2023-04-06T02:19:52Z",
+        "user_id": "korhan",
+        "fields": [
+          "health.chronic_illness"
+        ]
+      },
+      {
+        "date": "2023-04-17T21:25:28Z",
+        "user_id": "atesh",
+        "fields": [
+          "profile.address"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-10-25T12:17:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "companionship-emotional-support"
+          },
+          {
+            "key": "medication-administration"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          },
+          {
+            "key": "tube-feeding"
+          },
+          {
+            "key": "hair-cutting-care"
+          }
+        ]
+      },
+      {
+        "date": "2025-08-25T03:12:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "temperature",
+            "value": "36.9 C"
+          },
+          {
+            "key": "medication-administration"
+          },
+          {
+            "key": "laundry-clothing-care"
+          },
+          {
+            "key": "bed-linen-changes"
+          },
+          {
+            "key": "disinfection"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-08T18:52:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "rehabilitation-exercises"
+          },
+          {
+            "key": "medication-administration"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "98%"
+          },
+          {
+            "key": "room-cleaning-tidying"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "12e716e0-3c2a-42d2-bcfa-3d3099746502",
+      "active": false,
+      "created_at": "2023-07-21T10:23:08Z",
+      "updated_at": "2024-03-09T20:14:05Z",
+      "created_by": "huseyin",
+      "updated_by": "atesh",
+      "first_name": "Gul",
+      "last_name": "Ozdemir",
+      "date_of_birth": "1941-01-16",
+      "birthplace": "Ankara",
+      "nationality": "TR",
+      "identification_number": "91699854353",
+      "address": "Ataturk Mah, Baglar Sk. No:86 D:20, Kayseri",
+      "blood_type": "ab rh-",
+      "home_phone": null,
+      "mobile_phone": "5340799118",
+      "gender": "female",
+      "responsible_staff": "korhan",
+      "image": "/api/residents/12e716e0-3c2a-42d2-bcfa-3d3099746502/image",
+      "image_file": "female-2.jpg",
+      "room": "A-103"
+    },
+    "health": {
+      "independence": "independent",
+      "mobility": "slow-or-unstable-walking",
+      "motor_function": "normal-hand-function",
+      "cognitive_status": "normal-cognition",
+      "chronic_illness": "COPD with occasional shortness of breath.",
+      "medications": "Donepezil nightly.",
+      "allergies": "Seafood.",
+      "medical_history": "Hip replacement in 2016.",
+      "relatives": "Halil Ozdemir (son) - halil.ozdemir@gmail.com; Fatma Ozdemir (wife); Gonca Ozdemir (sister)",
+      "vision": "normal",
+      "hearing": "deaf"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": true,
+      "chemotherapy_port": false,
+      "cochlear_implant": true,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": true,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": true
+    },
+    "update_log": [
+      {
+        "date": "2023-08-31T07:55:34Z",
+        "user_id": "reha",
+        "fields": [
+          "equipment_used.oxygen",
+          "health.chronic_illness",
+          "profile.address"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-11-08T12:29:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "disinfection"
+          },
+          {
+            "key": "hair-cutting-care"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          },
+          {
+            "key": "group-activities"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "97%"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "112de4ab-e4de-4367-82bb-f10372ec1a04",
+      "active": true,
+      "created_at": "2022-09-06T03:46:17Z",
+      "updated_at": "2023-05-18T09:37:44Z",
+      "created_by": "reha",
+      "updated_by": "reha",
+      "first_name": "Levent",
+      "last_name": "Yilmaz",
+      "date_of_birth": "1949-04-12",
+      "birthplace": "Antalya",
+      "nationality": "TR",
+      "identification_number": "04505331586",
+      "address": "Ataturk Mah, Barbaros Sk. No:103 D:12, Antalya",
+      "blood_type": "ab rh+",
+      "home_phone": null,
+      "mobile_phone": "5066342160",
+      "gender": "male",
+      "responsible_staff": "huseyin",
+      "image": "/api/residents/112de4ab-e4de-4367-82bb-f10372ec1a04/image",
+      "image_file": "male-3.jpg",
+      "room": "A-210"
+    },
+    "health": {
+      "independence": "partial-assistance",
+      "mobility": "bedridden",
+      "motor_function": "limited-hand-function",
+      "cognitive_status": "mild-cognitive-impairment",
+      "chronic_illness": "Chronic kidney disease stage 2.",
+      "medications": "Lisinopril, atorvastatin.",
+      "allergies": "Dust mites.",
+      "medical_history": "Cataract surgery in 2014.",
+      "relatives": "Cem Yilmaz (son) - 5366000705; Levent Yilmaz (nephew)",
+      "vision": "impaired",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": true,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": true,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": true,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": true,
+      "prosthetic_heart_valves": true,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2022-11-15T09:54:57Z",
+        "user_id": "korhan",
+        "fields": [
+          "profile.phone",
+          "equipment_used.oxygen",
+          "health.independence"
+        ]
+      },
+      {
+        "date": "2023-02-21T23:05:30Z",
+        "user_id": "korhan",
+        "fields": [
+          "health.mobility",
+          "health.independence",
+          "profile.address"
+        ]
+      },
+      {
+        "date": "2022-07-09T23:05:36Z",
+        "user_id": "huseyin",
+        "fields": [
+          "profile.address",
+          "health.cognitive_status"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-09-02T08:20:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "group-activities"
+          },
+          {
+            "key": "wound-care-dressing"
+          },
+          {
+            "key": "hair-cutting-care"
+          },
+          {
+            "key": "other-nutrition-methods"
+          },
+          {
+            "key": "regular-meals"
+          }
+        ]
+      },
+      {
+        "date": "2025-12-13T15:05:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "wheelchair-use"
+          },
+          {
+            "key": "tube-feeding"
+          },
+          {
+            "key": "disinfection"
+          },
+          {
+            "key": "shared-space-maintenance"
+          },
+          {
+            "key": "feeding-assistance"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-14T08:16:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "135/85 mmHg"
+          },
+          {
+            "key": "group-activities"
+          }
+        ]
+      },
+      {
+        "date": "2025-10-11T04:51:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "odor-control"
+          },
+          {
+            "key": "laundry-clothing-care"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "98%"
+          },
+          {
+            "key": "meal-refused"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "422b7257-d650-4618-a6e1-62824562ca9f",
+      "active": true,
+      "created_at": "2023-03-30T19:31:22Z",
+      "updated_at": "2023-12-06T01:00:17Z",
+      "created_by": "reha",
+      "updated_by": "korhan",
+      "first_name": "Yasemin",
+      "last_name": "Aksoy",
+      "date_of_birth": "1944-10-23",
+      "birthplace": "Mersin",
+      "nationality": "TR",
+      "identification_number": "14846564823",
+      "address": "Bahcelievler Mah, Yunus Emre Sk. No:87 D:12, Balikesir",
+      "blood_type": "b rh+",
+      "home_phone": "2124436995",
+      "mobile_phone": "5537738721",
+      "gender": "female",
+      "responsible_staff": "atesh",
+      "image": null,
+      "image_file": null,
+      "room": "B-113"
+    },
+    "health": {
+      "independence": "full-care",
+      "mobility": "wheelchair-dependent",
+      "motor_function": "fine-motor-difficulty",
+      "cognitive_status": "dementia-alzheimers-symptoms",
+      "chronic_illness": "Osteoarthritis in both knees.",
+      "medications": "Donepezil nightly.",
+      "allergies": "Seasonal pollen.",
+      "medical_history": "Minor stroke in 2019; recovered.",
+      "relatives": "Tuncay Aksoy (son) - 5352481075",
+      "vision": "blind",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": true,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": true,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-06-28T01:23:34Z",
+        "user_id": "reha",
+        "fields": [
+          "health.mobility",
+          "health.independence",
+          "equipment_used.oxygen"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-12-23T06:38:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "oxygen-saturation",
+            "value": "97%"
+          },
+          {
+            "key": "toileting-incontinence-care"
+          },
+          {
+            "key": "medication-administration"
+          },
+          {
+            "key": "dressing-undressing-assistance"
+          },
+          {
+            "key": "other-nutrition-methods"
+          }
+        ]
+      },
+      {
+        "date": "2025-10-18T22:15:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "blood-pressure",
+            "value": "120/80 mmHg"
+          },
+          {
+            "key": "bathing-shower-assistance"
+          }
+        ]
+      },
+      {
+        "date": "2025-10-23T21:53:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "shared-space-maintenance"
+          },
+          {
+            "key": "bathing-shower-assistance"
+          },
+          {
+            "key": "transfers-bed-to-chair"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-23T01:46:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "medical-reporting-referrals"
+          },
+          {
+            "key": "group-activities"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "b1a68bdb-62c8-4691-82ac-cdb34bb22509",
+      "active": false,
+      "created_at": "2023-04-29T22:55:44Z",
+      "updated_at": "2024-08-12T07:04:45Z",
+      "created_by": "huseyin",
+      "updated_by": "huseyin",
+      "first_name": "Mustafa",
+      "last_name": "Yildirim",
+      "date_of_birth": "1950-01-01",
+      "birthplace": "Konya",
+      "nationality": "TR",
+      "identification_number": "77434873471",
+      "address": "Yesilova Mah, Barbaros Sk. No:43 D:21, Eskisehir",
+      "blood_type": "0 rh-",
+      "home_phone": null,
+      "mobile_phone": "5396231665",
+      "gender": "male",
+      "responsible_staff": "huseyin",
+      "image": "/api/residents/b1a68bdb-62c8-4691-82ac-cdb34bb22509/image",
+      "image_file": "male-3.jpg",
+      "room": "A-211"
+    },
+    "health": {
+      "independence": "independent",
+      "mobility": "crutches-or-cane",
+      "motor_function": "normal-hand-function",
+      "cognitive_status": "normal-cognition",
+      "chronic_illness": "Coronary artery disease history.",
+      "medications": "Paracetamol as needed.",
+      "allergies": "",
+      "medical_history": "Appendectomy in 1980.",
+      "relatives": "Gonca Yildirim (daughter) - 5542003171; Huseyin Yildirim (brother) - 5381222003",
+      "vision": "normal",
+      "hearing": "impaired"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": true,
+      "cochlear_implant": true,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": true,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-05-15T05:22:22Z",
+        "user_id": "reha",
+        "fields": [
+          "health.cognitive_status"
+        ]
+      },
+      {
+        "date": "2024-05-20T07:58:03Z",
+        "user_id": "atesh",
+        "fields": [
+          "health.chronic_illness",
+          "health.mobility",
+          "profile.address"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-09-19T19:06:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "injections-iv-therapy"
+          },
+          {
+            "key": "bed-linen-changes"
+          },
+          {
+            "key": "transfers-bed-to-chair"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "13b0e7f7-96a3-41c9-bc60-b3221a4e962b",
+      "active": false,
+      "created_at": "2022-03-28T17:46:33Z",
+      "updated_at": "2023-08-13T09:56:14Z",
+      "created_by": "huseyin",
+      "updated_by": "huseyin",
+      "first_name": "Sevgi",
+      "last_name": "Gunes",
+      "date_of_birth": "1942-06-25",
+      "birthplace": "Balikesir",
+      "nationality": "TR",
+      "identification_number": "41708053100",
+      "address": "Merkez, Barbaros Sk. No:80 D:10, Gaziantep",
+      "blood_type": "a rh-",
+      "home_phone": null,
+      "mobile_phone": "5359374529",
+      "gender": "female",
+      "responsible_staff": "mehmet",
+      "image": null,
+      "image_file": null,
+      "room": "B-120"
+    },
+    "health": {
+      "independence": "partial-assistance",
+      "mobility": "slow-or-unstable-walking",
+      "motor_function": "limited-hand-function",
+      "cognitive_status": "mild-cognitive-impairment",
+      "chronic_illness": "Coronary artery disease history.",
+      "medications": "",
+      "allergies": "Penicillin.",
+      "medical_history": "Hip replacement in 2016.",
+      "relatives": "Gonca Gunes (daughter) - 5527849179 / gonca.gunes@yahoo.com; Ahmet Gunes (husband) - 5340020118 / ahmet.gunes@gmail.com; Elif Gunes (sister) - 5514778636",
+      "vision": "normal",
+      "hearing": "deaf"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": true,
+      "eyeglasses": false,
+      "hearing_aid": true,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2024-03-07T12:14:17Z",
+        "user_id": "huseyin",
+        "fields": [
+          "profile.phone",
+          "health.mobility",
+          "health.cognitive_status"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-08-09T14:32:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "odor-control"
+          },
+          {
+            "key": "bathing-shower-assistance"
+          },
+          {
+            "key": "pulse",
+            "value": "65 bpm"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "e76ee79b-95d9-4208-91bb-6553c7d04998",
+      "active": true,
+      "created_at": "2022-09-10T21:51:37Z",
+      "updated_at": "2023-05-04T20:36:17Z",
+      "created_by": "reha",
+      "updated_by": "korhan",
+      "first_name": "Ali",
+      "last_name": "Bozkurt",
+      "date_of_birth": "1955-07-25",
+      "birthplace": "Trabzon",
+      "nationality": "TR",
+      "identification_number": "50752735454",
+      "address": "Merkez, Istiklal Sk. No:67 D:13, Kayseri",
+      "blood_type": "0 rh-",
+      "home_phone": null,
+      "mobile_phone": "5527837770",
+      "gender": "male",
+      "responsible_staff": "atesh",
+      "image": null,
+      "image_file": null,
+      "room": null
+    },
+    "health": {
+      "independence": "full-care",
+      "mobility": "bedridden",
+      "motor_function": "fine-motor-difficulty",
+      "cognitive_status": "dementia-alzheimers-symptoms",
+      "chronic_illness": "Type 2 diabetes and hypertension.",
+      "medications": "Warfarin, furosemide.",
+      "allergies": "Dust mites.",
+      "medical_history": "Cataract surgery in 2014.",
+      "relatives": "Emine Bozkurt (daughter) - emine.bozkurt@outlook.com; Bahar Bozkurt (daughter)",
+      "vision": "impaired",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": true,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2024-05-27T13:29:31Z",
+        "user_id": "reha",
+        "fields": [
+          "equipment_used.oxygen",
+          "health.independence",
+          "profile.address"
+        ]
+      },
+      {
+        "date": "2024-05-10T17:50:51Z",
+        "user_id": "reha",
+        "fields": [
+          "health.independence",
+          "equipment_used.oxygen"
+        ]
+      },
+      {
+        "date": "2024-07-30T05:34:12Z",
+        "user_id": "huseyin",
+        "fields": [
+          "equipment_used.oxygen"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-08-11T09:37:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "disinfection"
+          },
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "bed-linen-changes"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-10T01:54:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "regular-meals"
+          },
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "toileting-incontinence-care"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-15T10:32:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "wheelchair-use"
+          },
+          {
+            "key": "rehabilitation-exercises"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "de3c536b-72f2-4000-a16b-cd2d54ddd9ed",
+      "active": true,
+      "created_at": "2022-04-18T04:23:34Z",
+      "updated_at": "2023-07-17T11:29:19Z",
+      "created_by": "reha",
+      "updated_by": "mehmet",
+      "first_name": "Derya",
+      "last_name": "Ozdemir",
+      "date_of_birth": "1932-04-21",
+      "birthplace": "Kayseri",
+      "nationality": "TR",
+      "identification_number": "71167190229",
+      "address": "Gultepe Mah, Cumhuriyet Sk. No:16 D:36, Eskisehir",
+      "blood_type": "ab rh+",
+      "home_phone": "2328677496",
+      "mobile_phone": "5059909133",
+      "gender": "female",
+      "responsible_staff": "mehmet",
+      "image": "/api/residents/de3c536b-72f2-4000-a16b-cd2d54ddd9ed/image",
+      "image_file": "female-2.jpg",
+      "room": null
+    },
+    "health": {
+      "independence": "independent",
+      "mobility": "wheelchair-dependent",
+      "motor_function": "normal-hand-function",
+      "cognitive_status": "normal-cognition",
+      "chronic_illness": "Osteoarthritis in both knees.",
+      "medications": "",
+      "allergies": "Penicillin.",
+      "medical_history": "Hip replacement in 2016.",
+      "relatives": "Ceren Ozdemir (daughter) - 5016841412 / ceren.ozdemir@gmail.com; Seda Ozdemir (niece) - 5338091242; Fatma Ozdemir (daughter) - 5511415790 / fatma.ozdemir@outlook.com",
+      "vision": "blind",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": true,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": true,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": true,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-01-15T06:58:25Z",
+        "user_id": "atesh",
+        "fields": [
+          "health.mobility",
+          "health.independence",
+          "health.chronic_illness"
+        ]
+      },
+      {
+        "date": "2024-12-10T21:43:42Z",
+        "user_id": "korhan",
+        "fields": [
+          "health.cognitive_status"
+        ]
+      },
+      {
+        "date": "2023-02-02T10:47:09Z",
+        "user_id": "atesh",
+        "fields": [
+          "profile.phone",
+          "health.independence"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-11-23T02:04:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "disinfection"
+          },
+          {
+            "key": "odor-control"
+          },
+          {
+            "key": "wound-care-dressing"
+          },
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "injections-iv-therapy"
+          }
+        ]
+      },
+      {
+        "date": "2025-08-04T13:18:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "rehabilitation-exercises"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "120/80 mmHg"
+          },
+          {
+            "key": "disinfection"
+          }
+        ]
+      },
+      {
+        "date": "2025-08-11T07:11:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "rehabilitation-exercises"
+          },
+          {
+            "key": "nail-care"
+          },
+          {
+            "key": "iv-nutrition"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "bf5aa8ca-366c-4141-b594-a0b11f0100a5",
+      "active": false,
+      "created_at": "2023-07-19T02:35:29Z",
+      "updated_at": "2024-12-04T08:29:55Z",
+      "created_by": "korhan",
+      "updated_by": "mehmet",
+      "first_name": "Derya",
+      "last_name": "Bozkurt",
+      "date_of_birth": "1930-12-06",
+      "birthplace": "Kayseri",
+      "nationality": "TR",
+      "identification_number": "90278742967",
+      "address": "Cumhuriyet Mah, Inonu Sk. No:53 D:22, Izmir",
+      "blood_type": "b rh-",
+      "home_phone": "2245674680",
+      "mobile_phone": "5531545168",
+      "gender": "female",
+      "responsible_staff": "mehmet",
+      "image": "/api/residents/bf5aa8ca-366c-4141-b594-a0b11f0100a5/image",
+      "image_file": "female-2.jpg",
+      "room": null
+    },
+    "health": {
+      "independence": "partial-assistance",
+      "mobility": "crutches-or-cane",
+      "motor_function": "limited-hand-function",
+      "cognitive_status": "mild-cognitive-impairment",
+      "chronic_illness": "Type 2 diabetes and hypertension.",
+      "medications": "",
+      "allergies": "Seasonal pollen.",
+      "medical_history": "Cataract surgery in 2014.",
+      "relatives": "Gul Bozkurt (daughter); Ayse Bozkurt (sister) - 5512049428",
+      "vision": "normal",
+      "hearing": "impaired"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": true,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-02-10T15:28:43Z",
+        "user_id": "reha",
+        "fields": [
+          "profile.phone",
+          "equipment_used.oxygen",
+          "health.cognitive_status"
+        ]
+      },
+      {
+        "date": "2023-06-29T05:10:43Z",
+        "user_id": "reha",
+        "fields": [
+          "profile.phone"
+        ]
+      },
+      {
+        "date": "2023-09-22T21:39:53Z",
+        "user_id": "mehmet",
+        "fields": [
+          "health.mobility",
+          "profile.address"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-08-06T12:37:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "wound-care-dressing"
+          },
+          {
+            "key": "hair-cutting-care"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "pulse",
+            "value": "88 bpm"
+          },
+          {
+            "key": "bathing-shower-assistance"
+          }
+        ]
+      },
+      {
+        "date": "2025-10-01T10:24:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "disinfection"
+          },
+          {
+            "key": "bathing-shower-assistance"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "pulse",
+            "value": "72 bpm"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "135/85 mmHg"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-07T01:01:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "dressing-undressing-assistance"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-24T19:39:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "tube-feeding"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "92%"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "1f941d04-36e3-42b0-af70-f7d277f25633",
+      "active": true,
+      "created_at": "2023-01-30T22:56:18Z",
+      "updated_at": "2023-09-20T04:25:15Z",
+      "created_by": "mehmet",
+      "updated_by": "atesh",
+      "first_name": "Derya",
+      "last_name": "Yildirim",
+      "date_of_birth": "1952-10-10",
+      "birthplace": "Kayseri",
+      "nationality": "TR",
+      "identification_number": "04499727875",
+      "address": "Bahcelievler Mah, Istiklal Sk. No:59 D:21, Mersin",
+      "blood_type": "a rh-",
+      "home_phone": "2329636057",
+      "mobile_phone": "5516270289",
+      "gender": "female",
+      "responsible_staff": "atesh",
+      "image": "/api/residents/1f941d04-36e3-42b0-af70-f7d277f25633/image",
+      "image_file": "female-2.jpg",
+      "room": "C-307"
+    },
+    "health": {
+      "independence": "full-care",
+      "mobility": "slow-or-unstable-walking",
+      "motor_function": "fine-motor-difficulty",
+      "cognitive_status": "dementia-alzheimers-symptoms",
+      "chronic_illness": "Osteoarthritis in both knees.",
+      "medications": "Metformin, amlodipine, aspirin.",
+      "allergies": "",
+      "medical_history": "Appendectomy in 1980.",
+      "relatives": "Mustafa Yildirim (son) - 5518127389",
+      "vision": "normal",
+      "hearing": "deaf"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": true,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2022-11-21T11:18:50Z",
+        "user_id": "mehmet",
+        "fields": [
+          "health.chronic_illness"
+        ]
+      },
+      {
+        "date": "2024-04-15T03:23:37Z",
+        "user_id": "atesh",
+        "fields": [
+          "health.mobility"
+        ]
+      },
+      {
+        "date": "2022-08-29T23:34:56Z",
+        "user_id": "atesh",
+        "fields": [
+          "equipment_used.oxygen",
+          "health.independence"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-12-04T22:16:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "wheelchair-use"
+          },
+          {
+            "key": "medication-administration"
+          },
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "other-nutrition-methods"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "145/90 mmHg"
+          }
+        ]
+      },
+      {
+        "date": "2025-08-31T15:56:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "bathing-shower-assistance"
+          },
+          {
+            "key": "rehabilitation-exercises"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-11T15:27:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "rehabilitation-exercises"
+          },
+          {
+            "key": "regular-meals"
+          },
+          {
+            "key": "shared-space-maintenance"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "97%"
+          },
+          {
+            "key": "wheelchair-use"
+          },
+          {
+            "key": "pulse",
+            "value": "78 bpm"
+          }
+        ]
+      },
+      {
+        "date": "2025-07-27T08:48:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "other-nutrition-methods"
+          },
+          {
+            "key": "wheelchair-use"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "110/70 mmHg"
+          },
+          {
+            "key": "shared-space-maintenance"
+          },
+          {
+            "key": "temperature",
+            "value": "37.2 C"
+          },
+          {
+            "key": "feeding-assistance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "f18ecf6a-bdde-4216-9466-60d0a6504f78",
+      "active": true,
+      "created_at": "2023-11-21T22:49:15Z",
+      "updated_at": "2023-12-29T13:50:08Z",
+      "created_by": "huseyin",
+      "updated_by": "mehmet",
+      "first_name": "Emine",
+      "last_name": "Aslan",
+      "date_of_birth": "1938-01-29",
+      "birthplace": "Konya",
+      "nationality": "TR",
+      "identification_number": "21969379237",
+      "address": "Yesilova Mah, Inonu Sk. No:86 D:1, Kayseri",
+      "blood_type": "ab rh-",
+      "home_phone": "2241759464",
+      "mobile_phone": "5534367136",
+      "gender": "female",
+      "responsible_staff": "reha",
+      "image": "/api/residents/f18ecf6a-bdde-4216-9466-60d0a6504f78/image",
+      "image_file": "female-3.jpg",
+      "room": "A-110"
+    },
+    "health": {
+      "independence": "independent",
+      "mobility": "bedridden",
+      "motor_function": "normal-hand-function",
+      "cognitive_status": "normal-cognition",
+      "chronic_illness": "Coronary artery disease history.",
+      "medications": "Warfarin, furosemide.",
+      "allergies": "Seasonal pollen.",
+      "medical_history": "Minor stroke in 2019; recovered.",
+      "relatives": "Aylin Aslan (daughter) - 5387969683 / aylin.aslan@gmail.com",
+      "vision": "impaired",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": true,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": true,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": true,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": true,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": true
+    },
+    "update_log": [
+      {
+        "date": "2022-05-21T08:32:51Z",
+        "user_id": "korhan",
+        "fields": [
+          "equipment_used.oxygen"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-11-30T03:08:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "assisted-walking"
+          },
+          {
+            "key": "disinfection"
+          },
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "other-nutrition-methods"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "wheelchair-use"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-01T14:34:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "regular-meals"
+          },
+          {
+            "key": "other-nutrition-methods"
+          }
+        ]
+      },
+      {
+        "date": "2025-08-08T19:53:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "medication-administration"
+          },
+          {
+            "key": "dressing-undressing-assistance"
+          },
+          {
+            "key": "room-cleaning-tidying"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          },
+          {
+            "key": "bathing-shower-assistance"
+          }
+        ]
+      },
+      {
+        "date": "2025-10-11T02:06:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "meal-refused"
+          },
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "injections-iv-therapy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "a5e04f84-4d33-46a4-8e57-fb4955541c60",
+      "active": false,
+      "created_at": "2022-01-25T22:36:21Z",
+      "updated_at": "2023-09-14T04:58:47Z",
+      "created_by": "reha",
+      "updated_by": "reha",
+      "first_name": "Esra",
+      "last_name": "Aydin",
+      "date_of_birth": "1936-04-25",
+      "birthplace": "Gaziantep",
+      "nationality": "TR",
+      "identification_number": "68516048175",
+      "address": "Bahcelievler Mah, Menderes Sk. No:106 D:24, Kayseri",
+      "blood_type": "0 rh-",
+      "home_phone": "2280985931",
+      "mobile_phone": "5534612004",
+      "gender": "female",
+      "responsible_staff": "reha",
+      "image": "/api/residents/a5e04f84-4d33-46a4-8e57-fb4955541c60/image",
+      "image_file": "female-3.jpg",
+      "room": null
+    },
+    "health": {
+      "independence": "partial-assistance",
+      "mobility": "normal",
+      "motor_function": "limited-hand-function",
+      "cognitive_status": "mild-cognitive-impairment",
+      "chronic_illness": "Chronic kidney disease stage 2.",
+      "medications": "Metformin, amlodipine, aspirin.",
+      "allergies": "Penicillin.",
+      "medical_history": "Hip replacement in 2016.",
+      "relatives": "Erdem Aydin (son) - 5055563885; Sultan Aydin (daughter) - sultan.aydin@outlook.com; Levent Aydin (nephew) - levent.aydin@example.com",
+      "vision": "blind",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": true,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": true
+    },
+    "update_log": [
+      {
+        "date": "2024-06-21T01:12:53Z",
+        "user_id": "mehmet",
+        "fields": [
+          "equipment_used.oxygen",
+          "profile.phone"
+        ]
+      },
+      {
+        "date": "2022-07-04T10:44:40Z",
+        "user_id": "korhan",
+        "fields": [
+          "health.mobility",
+          "profile.phone",
+          "equipment_used.oxygen"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-10-31T14:30:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "regular-meals"
+          },
+          {
+            "key": "bed-linen-changes"
+          },
+          {
+            "key": "tube-feeding"
+          },
+          {
+            "key": "toileting-incontinence-care"
+          },
+          {
+            "key": "disinfection"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-29T19:15:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "bed-linen-changes"
+          },
+          {
+            "key": "meal-refused"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "15bc7c17-bb98-4ef9-b693-65c438833600",
+      "active": true,
+      "created_at": "2022-07-27T01:11:28Z",
+      "updated_at": "2024-12-07T13:29:26Z",
+      "created_by": "atesh",
+      "updated_by": "huseyin",
+      "first_name": "Erdem",
+      "last_name": "Karaca",
+      "date_of_birth": "1940-06-14",
+      "birthplace": "Mersin",
+      "nationality": "TR",
+      "identification_number": "29042284210",
+      "address": "Cumhuriyet Mah, Ataturk Sk. No:102 D:16, Antalya",
+      "blood_type": "b rh-",
+      "home_phone": null,
+      "mobile_phone": "5010268117",
+      "gender": "male",
+      "responsible_staff": "korhan",
+      "image": "/api/residents/15bc7c17-bb98-4ef9-b693-65c438833600/image",
+      "image_file": "male-1.jpg",
+      "room": "C-220"
+    },
+    "health": {
+      "independence": "full-care",
+      "mobility": "normal",
+      "motor_function": "fine-motor-difficulty",
+      "cognitive_status": "dementia-alzheimers-symptoms",
+      "chronic_illness": "Chronic kidney disease stage 2.",
+      "medications": "Warfarin, furosemide.",
+      "allergies": "Seasonal pollen.",
+      "medical_history": "Fall-related fracture in 2021.",
+      "relatives": "Ali Karaca (son) - 5344420496 / ali.karaca@example.com",
+      "vision": "normal",
+      "hearing": "impaired"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": true,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": true,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-04-29T13:12:17Z",
+        "user_id": "reha",
+        "fields": [
+          "health.independence",
+          "health.chronic_illness",
+          "health.cognitive_status"
+        ]
+      },
+      {
+        "date": "2022-05-05T14:29:44Z",
+        "user_id": "korhan",
+        "fields": [
+          "profile.address"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-11-14T09:14:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "companionship-emotional-support"
+          },
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "temperature",
+            "value": "36.6 C"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "95%"
+          },
+          {
+            "key": "regular-meals"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          }
+        ]
+      },
+      {
+        "date": "2025-12-12T23:18:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "iv-nutrition"
+          },
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "regular-meals"
+          }
+        ]
+      },
+      {
+        "date": "2026-01-02T09:15:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "group-activities"
+          },
+          {
+            "key": "disinfection"
+          },
+          {
+            "key": "hair-cutting-care"
+          },
+          {
+            "key": "temperature",
+            "value": "37.2 C"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "pulse",
+            "value": "88 bpm"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "6cee32f9-e75b-49f8-a068-8d06e60abb6f",
+      "active": true,
+      "created_at": "2021-08-10T17:51:00Z",
+      "updated_at": "2024-12-30T16:08:58Z",
+      "created_by": "reha",
+      "updated_by": "reha",
+      "first_name": "Gul",
+      "last_name": "Karaca",
+      "date_of_birth": "1949-02-22",
+      "birthplace": "Mersin",
+      "nationality": "TR",
+      "identification_number": "45271111615",
+      "address": "Merkez, Istiklal Sk. No:76 D:36, Antalya",
+      "blood_type": "b rh-",
+      "home_phone": "2225604945",
+      "mobile_phone": "5359832731",
+      "gender": "female",
+      "responsible_staff": "mehmet",
+      "image": null,
+      "image_file": null,
+      "room": null
+    },
+    "health": {
+      "independence": "independent",
+      "mobility": "normal",
+      "motor_function": "normal-hand-function",
+      "cognitive_status": "normal-cognition",
+      "chronic_illness": "Osteoarthritis in both knees.",
+      "medications": "Donepezil nightly.",
+      "allergies": "Seafood.",
+      "medical_history": "Appendectomy in 1980.",
+      "relatives": "Hatice Karaca (daughter) - 5077762668 / hatice.karaca@yahoo.com; Derya Karaca (niece) - derya.karaca@example.com; Bahar Karaca (grandchild) - 5346554915 / bahar.karaca@gmail.com",
+      "vision": "normal",
+      "hearing": "deaf"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": true,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2022-10-31T02:23:29Z",
+        "user_id": "atesh",
+        "fields": [
+          "health.chronic_illness",
+          "equipment_used.oxygen"
+        ]
+      },
+      {
+        "date": "2023-10-28T13:52:05Z",
+        "user_id": "mehmet",
+        "fields": [
+          "health.independence",
+          "health.mobility",
+          "health.chronic_illness"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-11-14T13:47:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "medication-administration"
+          }
+        ]
+      },
+      {
+        "date": "2025-12-23T12:00:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "tube-feeding"
+          },
+          {
+            "key": "wheelchair-use"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "temperature",
+            "value": "37.2 C"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-07T02:44:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "toileting-incontinence-care"
+          },
+          {
+            "key": "room-cleaning-tidying"
+          },
+          {
+            "key": "dressing-undressing-assistance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "d2b72bea-1ac5-479f-84fb-1a997a58d43a",
+      "active": true,
+      "created_at": "2022-01-05T09:56:58Z",
+      "updated_at": "2024-12-20T11:14:59Z",
+      "created_by": "korhan",
+      "updated_by": "korhan",
+      "first_name": "Ismail",
+      "last_name": "Yilmaz",
+      "date_of_birth": "1932-03-26",
+      "birthplace": "Izmir",
+      "nationality": "TR",
+      "identification_number": "47679764381",
+      "address": "Yeni Mahalle, Baglar Sk. No:37 D:38, Samsun",
+      "blood_type": "ab rh-",
+      "home_phone": "3120369003",
+      "mobile_phone": "5053244510",
+      "gender": "male",
+      "responsible_staff": "huseyin",
+      "image": null,
+      "image_file": null,
+      "room": "A-118"
+    },
+    "health": {
+      "independence": "partial-assistance",
+      "mobility": "bedridden",
+      "motor_function": "limited-hand-function",
+      "cognitive_status": "mild-cognitive-impairment",
+      "chronic_illness": "Chronic kidney disease stage 2.",
+      "medications": "",
+      "allergies": "",
+      "medical_history": "Hip replacement in 2016.",
+      "relatives": "Zeynep Yilmaz (daughter) - 5549455142 / zeynep.yilmaz@example.com; Gonca Yilmaz (mother) - 5523390719",
+      "vision": "impaired",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": true,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-01-07T05:12:56Z",
+        "user_id": "mehmet",
+        "fields": [
+          "health.mobility",
+          "profile.address",
+          "profile.phone"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-11-19T03:10:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "pulse",
+            "value": "72 bpm"
+          },
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "temperature",
+            "value": "37.2 C"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "145/90 mmHg"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-30T18:30:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "regular-meals"
+          },
+          {
+            "key": "room-cleaning-tidying"
+          },
+          {
+            "key": "dressing-undressing-assistance"
+          },
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "bed-linen-changes"
+          }
+        ]
+      },
+      {
+        "date": "2025-12-10T16:11:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "disinfection"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "92%"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "145/90 mmHg"
+          },
+          {
+            "key": "medication-administration"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "c978156b-3f33-428c-a910-3f8a17aad49b",
+      "active": true,
+      "created_at": "2023-05-30T20:52:36Z",
+      "updated_at": "2024-02-19T23:18:24Z",
+      "created_by": "huseyin",
+      "updated_by": "korhan",
+      "first_name": "Omer",
+      "last_name": "Tekin",
+      "date_of_birth": "1935-02-12",
+      "birthplace": "Sakarya",
+      "nationality": "TR",
+      "identification_number": "83552312432",
+      "address": "Yeni Mahalle, Yunus Emre Sk. No:23 D:32, Antalya",
+      "blood_type": "ab rh-",
+      "home_phone": "2289955271",
+      "mobile_phone": "5547449058",
+      "gender": "male",
+      "responsible_staff": "reha",
+      "image": null,
+      "image_file": null,
+      "room": "A-215"
+    },
+    "health": {
+      "independence": "full-care",
+      "mobility": "wheelchair-dependent",
+      "motor_function": "fine-motor-difficulty",
+      "cognitive_status": "dementia-alzheimers-symptoms",
+      "chronic_illness": "Type 2 diabetes and hypertension.",
+      "medications": "Warfarin, furosemide.",
+      "allergies": "",
+      "medical_history": "Cataract surgery in 2014.",
+      "relatives": "Mustafa Tekin (son) - 5077746813; Fatma Tekin (niece) - 5372834540",
+      "vision": "blind",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": true,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": true,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2024-04-09T00:45:33Z",
+        "user_id": "korhan",
+        "fields": [
+          "health.cognitive_status"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-11-13T03:16:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "assisted-walking"
+          },
+          {
+            "key": "disinfection"
+          },
+          {
+            "key": "bathing-shower-assistance"
+          },
+          {
+            "key": "pulse",
+            "value": "78 bpm"
+          },
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "wound-care-dressing"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-26T06:05:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "bed-linen-changes"
+          },
+          {
+            "key": "laundry-clothing-care"
+          },
+          {
+            "key": "assisted-walking"
+          },
+          {
+            "key": "temperature",
+            "value": "38.1 C"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-13T21:04:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "shared-space-maintenance"
+          },
+          {
+            "key": "wound-care-dressing"
+          },
+          {
+            "key": "rehabilitation-exercises"
+          },
+          {
+            "key": "wheelchair-use"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "beddb716-9973-4560-8528-f047a14c3958",
+      "active": true,
+      "created_at": "2022-01-21T11:42:23Z",
+      "updated_at": "2024-09-11T17:19:01Z",
+      "created_by": "mehmet",
+      "updated_by": "atesh",
+      "first_name": "Mehmet",
+      "last_name": "Yildirim",
+      "date_of_birth": "1955-01-11",
+      "birthplace": "Trabzon",
+      "nationality": "TR",
+      "identification_number": "44925192546",
+      "address": "Yeni Mahalle, Menderes Sk. No:40 D:36, Antalya",
+      "blood_type": "ab rh+",
+      "home_phone": "2622816850",
+      "mobile_phone": "5074235733",
+      "gender": "male",
+      "responsible_staff": "atesh",
+      "image": null,
+      "image_file": null,
+      "room": "B-110"
+    },
+    "health": {
+      "independence": "independent",
+      "mobility": "crutches-or-cane",
+      "motor_function": "normal-hand-function",
+      "cognitive_status": "normal-cognition",
+      "chronic_illness": "COPD with occasional shortness of breath.",
+      "medications": "Lisinopril, atorvastatin.",
+      "allergies": "Penicillin.",
+      "medical_history": "Minor stroke in 2019; recovered.",
+      "relatives": "Levent Yildirim (son) - 5537318776",
+      "vision": "normal",
+      "hearing": "impaired"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": true,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": true,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2024-07-11T03:46:06Z",
+        "user_id": "korhan",
+        "fields": [
+          "profile.address",
+          "health.chronic_illness",
+          "profile.phone"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-12-15T04:39:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "wound-care-dressing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "8e03d2b1-e2cf-4ec0-9453-e5b61229775f",
+      "active": true,
+      "created_at": "2021-12-06T15:56:06Z",
+      "updated_at": "2023-02-14T14:57:32Z",
+      "created_by": "korhan",
+      "updated_by": "atesh",
+      "first_name": "Erdem",
+      "last_name": "Ozkan",
+      "date_of_birth": "1933-10-06",
+      "birthplace": "Konya",
+      "nationality": "TR",
+      "identification_number": "47826137506",
+      "address": "Cumhuriyet Mah, Baglar Sk. No:31 D:25, Ankara",
+      "blood_type": "0 rh-",
+      "home_phone": "2125152204",
+      "mobile_phone": "5542779010",
+      "gender": "male",
+      "responsible_staff": "atesh",
+      "image": "/api/residents/8e03d2b1-e2cf-4ec0-9453-e5b61229775f/image",
+      "image_file": "male-2.jpg",
+      "room": "A-220"
+    },
+    "health": {
+      "independence": "partial-assistance",
+      "mobility": "slow-or-unstable-walking",
+      "motor_function": "limited-hand-function",
+      "cognitive_status": "mild-cognitive-impairment",
+      "chronic_illness": "Osteoarthritis in both knees.",
+      "medications": "Lisinopril, atorvastatin.",
+      "allergies": "Dust mites.",
+      "medical_history": "Fall-related fracture in 2021.",
+      "relatives": "Hatice Ozkan (daughter) - 5357348545; Sultan Ozkan (daughter) - sultan.ozkan@gmail.com; Sultan Ozkan (wife)",
+      "vision": "normal",
+      "hearing": "deaf"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": true,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-08-07T16:20:41Z",
+        "user_id": "atesh",
+        "fields": [
+          "profile.phone",
+          "health.independence",
+          "health.mobility"
+        ]
+      },
+      {
+        "date": "2023-02-02T13:23:33Z",
+        "user_id": "mehmet",
+        "fields": [
+          "health.mobility",
+          "health.independence"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-12-29T22:43:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "room-cleaning-tidying"
+          },
+          {
+            "key": "feeding-assistance"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-08T17:37:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "shared-space-maintenance"
+          },
+          {
+            "key": "group-activities"
+          },
+          {
+            "key": "hair-cutting-care"
+          },
+          {
+            "key": "odor-control"
+          },
+          {
+            "key": "assisted-walking"
+          },
+          {
+            "key": "medication-administration"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-08T00:40:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "iv-nutrition"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-27T00:13:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "temperature",
+            "value": "38.1 C"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "120/80 mmHg"
+          },
+          {
+            "key": "pulse",
+            "value": "88 bpm"
+          },
+          {
+            "key": "medication-administration"
+          },
+          {
+            "key": "laundry-clothing-care"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "525a8f64-36b9-4ee9-880e-59f25d4f1ee1",
+      "active": true,
+      "created_at": "2021-08-16T18:11:53Z",
+      "updated_at": "2024-09-03T19:31:01Z",
+      "created_by": "reha",
+      "updated_by": "mehmet",
+      "first_name": "Murat",
+      "last_name": "Demir",
+      "date_of_birth": "1944-11-30",
+      "birthplace": "Antalya",
+      "nationality": "TR",
+      "identification_number": "05852772217",
+      "address": "Gultepe Mah, Sehitler Sk. No:6 D:13, Ankara",
+      "blood_type": "0 rh+",
+      "home_phone": null,
+      "mobile_phone": "5058687403",
+      "gender": "male",
+      "responsible_staff": "atesh",
+      "image": null,
+      "image_file": null,
+      "room": "A-315"
+    },
+    "health": {
+      "independence": "full-care",
+      "mobility": "bedridden",
+      "motor_function": "fine-motor-difficulty",
+      "cognitive_status": "dementia-alzheimers-symptoms",
+      "chronic_illness": "Osteoarthritis in both knees.",
+      "medications": "Warfarin, furosemide.",
+      "allergies": "Penicillin.",
+      "medical_history": "",
+      "relatives": "Kemal Demir (son); Merve Demir (grandchild) - 5543453157",
+      "vision": "impaired",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": true,
+      "contact_lens": false,
+      "cpap": true,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": true,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-05-11T05:13:38Z",
+        "user_id": "korhan",
+        "fields": [
+          "profile.address",
+          "health.chronic_illness"
+        ]
+      },
+      {
+        "date": "2023-12-24T08:45:31Z",
+        "user_id": "mehmet",
+        "fields": [
+          "profile.phone",
+          "equipment_used.oxygen"
+        ]
+      },
+      {
+        "date": "2022-06-25T19:03:34Z",
+        "user_id": "korhan",
+        "fields": [
+          "health.chronic_illness"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-09-21T08:25:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "120/80 mmHg"
+          },
+          {
+            "key": "meal-refused"
+          },
+          {
+            "key": "medication-administration"
+          },
+          {
+            "key": "wound-care-dressing"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-16T05:12:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "assisted-walking"
+          },
+          {
+            "key": "dressing-undressing-assistance"
+          },
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "meal-refused"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "dd38d007-5f1b-4a6d-ac8e-b5bd7a7d63fd",
+      "active": true,
+      "created_at": "2021-06-19T15:27:20Z",
+      "updated_at": "2023-03-22T15:40:40Z",
+      "created_by": "mehmet",
+      "updated_by": "atesh",
+      "first_name": "Ceren",
+      "last_name": "Ozdemir",
+      "date_of_birth": "1949-08-28",
+      "birthplace": "Ankara",
+      "nationality": "TR",
+      "identification_number": "21355690927",
+      "address": "Karaca Mah, Gazi Sk. No:98 D:5, Samsun",
+      "blood_type": "a rh+",
+      "home_phone": "2225431027",
+      "mobile_phone": "5556814473",
+      "gender": "female",
+      "responsible_staff": "reha",
+      "image": "/api/residents/dd38d007-5f1b-4a6d-ac8e-b5bd7a7d63fd/image",
+      "image_file": "female-2.jpg",
+      "room": "B-310"
+    },
+    "health": {
+      "independence": "independent",
+      "mobility": "wheelchair-dependent",
+      "motor_function": "normal-hand-function",
+      "cognitive_status": "normal-cognition",
+      "chronic_illness": "Coronary artery disease history.",
+      "medications": "Warfarin, furosemide.",
+      "allergies": "",
+      "medical_history": "Hip replacement in 2016.",
+      "relatives": "Elif Ozdemir (daughter) - elif.ozdemir@example.com; Mehmet Ozdemir (son) - 5325748781; Ebru Ozdemir (sister) - 5530257212",
+      "vision": "blind",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": true,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": true
+    },
+    "update_log": [
+      {
+        "date": "2023-08-25T11:41:41Z",
+        "user_id": "reha",
+        "fields": [
+          "health.independence"
+        ]
+      },
+      {
+        "date": "2023-08-29T11:09:33Z",
+        "user_id": "huseyin",
+        "fields": [
+          "equipment_used.oxygen",
+          "health.mobility",
+          "profile.phone"
+        ]
+      },
+      {
+        "date": "2024-06-28T12:47:57Z",
+        "user_id": "huseyin",
+        "fields": [
+          "equipment_used.oxygen"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-08-20T12:55:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "toileting-incontinence-care"
+          },
+          {
+            "key": "medication-administration"
+          }
+        ]
+      },
+      {
+        "date": "2025-08-01T13:32:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "145/90 mmHg"
+          },
+          {
+            "key": "rehabilitation-exercises"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "92%"
+          }
+        ]
+      },
+      {
+        "date": "2025-12-30T02:15:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "companionship-emotional-support"
+          },
+          {
+            "key": "meal-refused"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          },
+          {
+            "key": "toileting-incontinence-care"
+          },
+          {
+            "key": "room-cleaning-tidying"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "e5e59d96-3529-40e3-829a-83f844cbb4d1",
+      "active": true,
+      "created_at": "2021-12-23T13:09:41Z",
+      "updated_at": "2024-06-04T08:09:51Z",
+      "created_by": "reha",
+      "updated_by": "atesh",
+      "first_name": "Derya",
+      "last_name": "Yildiz",
+      "date_of_birth": "1950-03-09",
+      "birthplace": "Denizli",
+      "nationality": "TR",
+      "identification_number": "85289226801",
+      "address": "Yesilova Mah, Fatih Sk. No:22 D:11, Sakarya",
+      "blood_type": "b rh-",
+      "home_phone": "2325841438",
+      "mobile_phone": "5012498182",
+      "gender": "female",
+      "responsible_staff": "huseyin",
+      "image": "/api/residents/e5e59d96-3529-40e3-829a-83f844cbb4d1/image",
+      "image_file": "female-2.jpg",
+      "room": "A-120"
+    },
+    "health": {
+      "independence": "partial-assistance",
+      "mobility": "crutches-or-cane",
+      "motor_function": "limited-hand-function",
+      "cognitive_status": "mild-cognitive-impairment",
+      "chronic_illness": "Coronary artery disease history.",
+      "medications": "Donepezil nightly.",
+      "allergies": "Dust mites.",
+      "medical_history": "Hip replacement in 2016.",
+      "relatives": "Derya Yildiz (daughter) - derya.yildiz@yahoo.com",
+      "vision": "normal",
+      "hearing": "impaired"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": true,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": true,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-04-30T17:59:12Z",
+        "user_id": "reha",
+        "fields": [
+          "health.chronic_illness",
+          "health.cognitive_status"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-10-13T10:18:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "other-nutrition-methods"
+          },
+          {
+            "key": "wheelchair-use"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-08T08:53:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "wound-care-dressing"
+          },
+          {
+            "key": "bathing-shower-assistance"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-18T05:15:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "wheelchair-use"
+          },
+          {
+            "key": "other-nutrition-methods"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "98%"
+          },
+          {
+            "key": "disinfection"
+          },
+          {
+            "key": "nail-care"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          }
+        ]
+      },
+      {
+        "date": "2025-10-09T07:30:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "group-activities"
+          },
+          {
+            "key": "other-nutrition-methods"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "c770817a-f6e7-43a2-9f59-0d2821a5136c",
+      "active": true,
+      "created_at": "2021-03-04T18:07:58Z",
+      "updated_at": "2024-10-04T19:51:49Z",
+      "created_by": "korhan",
+      "updated_by": "korhan",
+      "first_name": "Kemal",
+      "last_name": "Acar",
+      "date_of_birth": "1934-05-06",
+      "birthplace": "Ankara",
+      "nationality": "TR",
+      "identification_number": "46963259532",
+      "address": "Karaca Mah, Istiklal Sk. No:64 D:20, Kocaeli",
+      "blood_type": "ab rh-",
+      "home_phone": null,
+      "mobile_phone": "5518733950",
+      "gender": "male",
+      "responsible_staff": "huseyin",
+      "image": "/api/residents/c770817a-f6e7-43a2-9f59-0d2821a5136c/image",
+      "image_file": "male-3.jpg",
+      "room": "C-217"
+    },
+    "health": {
+      "independence": "full-care",
+      "mobility": "slow-or-unstable-walking",
+      "motor_function": "fine-motor-difficulty",
+      "cognitive_status": "dementia-alzheimers-symptoms",
+      "chronic_illness": "Type 2 diabetes and hypertension.",
+      "medications": "Warfarin, furosemide.",
+      "allergies": "",
+      "medical_history": "Fall-related fracture in 2021.",
+      "relatives": "Ayse Acar (daughter) - 5017364520",
+      "vision": "normal",
+      "hearing": "deaf"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": true,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-05-17T14:47:07Z",
+        "user_id": "korhan",
+        "fields": [
+          "profile.address",
+          "equipment_used.oxygen"
+        ]
+      },
+      {
+        "date": "2022-05-03T05:45:19Z",
+        "user_id": "huseyin",
+        "fields": [
+          "health.mobility",
+          "health.cognitive_status"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2026-01-20T06:28:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "shared-space-maintenance"
+          },
+          {
+            "key": "laundry-clothing-care"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          },
+          {
+            "key": "bed-linen-changes"
+          }
+        ]
+      },
+      {
+        "date": "2026-01-04T04:52:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "medical-reporting-referrals"
+          },
+          {
+            "key": "toileting-incontinence-care"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "110/70 mmHg"
+          },
+          {
+            "key": "companionship-emotional-support"
+          },
+          {
+            "key": "transfers-bed-to-chair"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-11T15:59:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "odor-control"
+          },
+          {
+            "key": "iv-nutrition"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-18T08:49:36Z",
+        "caretaker": "mehmet",
+        "actions": [
+          {
+            "key": "companionship-emotional-support"
+          },
+          {
+            "key": "bathing-shower-assistance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "0043ff7a-5047-4e84-8ed0-4a598ddac7ff",
+      "active": true,
+      "created_at": "2023-04-01T01:51:45Z",
+      "updated_at": "2024-08-06T20:27:18Z",
+      "created_by": "atesh",
+      "updated_by": "korhan",
+      "first_name": "Emre",
+      "last_name": "Kaya",
+      "date_of_birth": "1952-10-03",
+      "birthplace": "Sakarya",
+      "nationality": "TR",
+      "identification_number": "87947055169",
+      "address": "Merkez, Yunus Emre Sk. No:77 D:31, Eskisehir",
+      "blood_type": "b rh+",
+      "home_phone": "2320972896",
+      "mobile_phone": "5363091307",
+      "gender": "male",
+      "responsible_staff": "mehmet",
+      "image": "/api/residents/0043ff7a-5047-4e84-8ed0-4a598ddac7ff/image",
+      "image_file": "male-2.jpg",
+      "room": "B-305"
+    },
+    "health": {
+      "independence": "independent",
+      "mobility": "bedridden",
+      "motor_function": "normal-hand-function",
+      "cognitive_status": "normal-cognition",
+      "chronic_illness": "Osteoarthritis in both knees.",
+      "medications": "Paracetamol as needed.",
+      "allergies": "Dust mites.",
+      "medical_history": "Cataract surgery in 2014.",
+      "relatives": "Elif Kaya (daughter) - 5330663621",
+      "vision": "impaired",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": true,
+      "catheter": true,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": true,
+      "eyeglasses": false,
+      "hearing_aid": true,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-08-15T02:40:37Z",
+        "user_id": "huseyin",
+        "fields": [
+          "health.mobility",
+          "health.chronic_illness",
+          "health.independence"
+        ]
+      },
+      {
+        "date": "2022-09-01T04:41:04Z",
+        "user_id": "reha",
+        "fields": [
+          "health.independence",
+          "health.cognitive_status"
+        ]
+      },
+      {
+        "date": "2024-01-19T05:15:09Z",
+        "user_id": "atesh",
+        "fields": [
+          "health.chronic_illness",
+          "health.mobility",
+          "health.cognitive_status"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-09-01T00:03:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "odor-control"
+          },
+          {
+            "key": "iv-nutrition"
+          },
+          {
+            "key": "pulse",
+            "value": "88 bpm"
+          }
+        ]
+      },
+      {
+        "date": "2025-08-16T12:35:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "tube-feeding"
+          },
+          {
+            "key": "other-nutrition-methods"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-09T08:00:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "oxygen-saturation",
+            "value": "92%"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "hair-cutting-care"
+          },
+          {
+            "key": "rehabilitation-exercises"
+          },
+          {
+            "key": "tube-feeding"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "2e60c5b1-b29c-435c-81ee-0fb0619355c7",
+      "active": true,
+      "created_at": "2022-10-05T06:18:19Z",
+      "updated_at": "2024-04-15T19:24:38Z",
+      "created_by": "korhan",
+      "updated_by": "mehmet",
+      "first_name": "Levent",
+      "last_name": "Dogru",
+      "date_of_birth": "1936-07-27",
+      "birthplace": "Eskisehir",
+      "nationality": "TR",
+      "identification_number": "04157473384",
+      "address": "Ataturk Mah, Sehitler Sk. No:14 D:40, Manisa",
+      "blood_type": "a rh-",
+      "home_phone": null,
+      "mobile_phone": "5553301657",
+      "gender": "male",
+      "responsible_staff": "huseyin",
+      "image": "/api/residents/2e60c5b1-b29c-435c-81ee-0fb0619355c7/image",
+      "image_file": "male-1.jpg",
+      "room": null
+    },
+    "health": {
+      "independence": "partial-assistance",
+      "mobility": "normal",
+      "motor_function": "limited-hand-function",
+      "cognitive_status": "mild-cognitive-impairment",
+      "chronic_illness": "Type 2 diabetes and hypertension.",
+      "medications": "",
+      "allergies": "Dust mites.",
+      "medical_history": "Appendectomy in 1980.",
+      "relatives": "Omer Dogru (son) - omer.dogru@example.com; Nazan Dogru (wife) - 5352018902 / nazan.dogru@gmail.com",
+      "vision": "blind",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-06-26T22:12:43Z",
+        "user_id": "huseyin",
+        "fields": [
+          "profile.phone"
+        ]
+      },
+      {
+        "date": "2023-07-26T20:19:09Z",
+        "user_id": "korhan",
+        "fields": [
+          "health.independence"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-12-21T11:35:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "room-cleaning-tidying"
+          },
+          {
+            "key": "rehabilitation-exercises"
+          },
+          {
+            "key": "regular-meals"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-02T09:48:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "dressing-undressing-assistance"
+          },
+          {
+            "key": "group-activities"
+          }
+        ]
+      },
+      {
+        "date": "2025-12-07T06:41:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "iv-nutrition"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "toileting-incontinence-care"
+          },
+          {
+            "key": "assisted-walking"
+          },
+          {
+            "key": "wound-care-dressing"
+          }
+        ]
+      },
+      {
+        "date": "2026-01-14T17:21:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "assisted-walking"
+          },
+          {
+            "key": "odor-control"
+          },
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "toileting-incontinence-care"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "fcb6cf08-676a-48cd-bff8-803b93213ddd",
+      "active": true,
+      "created_at": "2021-03-18T06:22:26Z",
+      "updated_at": "2024-03-03T06:24:00Z",
+      "created_by": "reha",
+      "updated_by": "huseyin",
+      "first_name": "Gonca",
+      "last_name": "Aydin",
+      "date_of_birth": "1938-08-31",
+      "birthplace": "Konya",
+      "nationality": "TR",
+      "identification_number": "96685161227",
+      "address": "Merkez, Barbaros Sk. No:34 D:25, Mersin",
+      "blood_type": "a rh-",
+      "home_phone": "3125499045",
+      "mobile_phone": "5390174268",
+      "gender": "female",
+      "responsible_staff": "reha",
+      "image": "/api/residents/fcb6cf08-676a-48cd-bff8-803b93213ddd/image",
+      "image_file": "female-3.jpg",
+      "room": "A-217"
+    },
+    "health": {
+      "independence": "full-care",
+      "mobility": "crutches-or-cane",
+      "motor_function": "fine-motor-difficulty",
+      "cognitive_status": "dementia-alzheimers-symptoms",
+      "chronic_illness": "",
+      "medications": "Warfarin, furosemide.",
+      "allergies": "Penicillin.",
+      "medical_history": "",
+      "relatives": "Nazan Aydin (daughter) - 5398271598 / nazan.aydin@example.com; Zeynep Aydin (cousin) - zeynep.aydin@gmail.com; Merve Aydin (niece) - 5521182895",
+      "vision": "normal",
+      "hearing": "impaired"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": true,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": true,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-01-17T10:32:21Z",
+        "user_id": "reha",
+        "fields": [
+          "health.independence"
+        ]
+      },
+      {
+        "date": "2022-08-08T12:11:54Z",
+        "user_id": "korhan",
+        "fields": [
+          "equipment_used.oxygen",
+          "health.chronic_illness"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-11-09T22:53:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "dressing-undressing-assistance"
+          },
+          {
+            "key": "shared-space-maintenance"
+          },
+          {
+            "key": "wheelchair-use"
+          },
+          {
+            "key": "bed-linen-changes"
+          },
+          {
+            "key": "oxygen-saturation",
+            "value": "98%"
+          }
+        ]
+      },
+      {
+        "date": "2025-08-08T02:49:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "dressing-undressing-assistance"
+          },
+          {
+            "key": "temperature",
+            "value": "36.9 C"
+          },
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "other-nutrition-methods"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          },
+          {
+            "key": "toileting-incontinence-care"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-20T22:45:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "temperature",
+            "value": "36.9 C"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-28T09:26:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "regular-meals"
+          },
+          {
+            "key": "meal-refused"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "9f30b59f-092b-4dce-8590-3adba862b9f1",
+      "active": true,
+      "created_at": "2022-03-24T09:00:35Z",
+      "updated_at": "2024-11-27T21:41:34Z",
+      "created_by": "reha",
+      "updated_by": "mehmet",
+      "first_name": "Bahar",
+      "last_name": "Ozturk",
+      "date_of_birth": "1930-12-23",
+      "birthplace": "Trabzon",
+      "nationality": "TR",
+      "identification_number": "40391065180",
+      "address": "Merkez, Inonu Sk. No:37 D:27, Izmir",
+      "blood_type": "a rh+",
+      "home_phone": "2225676618",
+      "mobile_phone": "5365128682",
+      "gender": "female",
+      "responsible_staff": "korhan",
+      "image": null,
+      "image_file": null,
+      "room": "C-320"
+    },
+    "health": {
+      "independence": "independent",
+      "mobility": "slow-or-unstable-walking",
+      "motor_function": "normal-hand-function",
+      "cognitive_status": "normal-cognition",
+      "chronic_illness": "",
+      "medications": "Lisinopril, atorvastatin.",
+      "allergies": "Penicillin.",
+      "medical_history": "Appendectomy in 1980.",
+      "relatives": "Osman Ozturk (son) - osman.ozturk@outlook.com",
+      "vision": "normal",
+      "hearing": "deaf"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": true,
+      "cardio_defibrillator_iacd": true,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2024-12-17T13:10:19Z",
+        "user_id": "reha",
+        "fields": [
+          "profile.address",
+          "health.cognitive_status",
+          "health.chronic_illness"
+        ]
+      },
+      {
+        "date": "2024-11-01T07:21:37Z",
+        "user_id": "mehmet",
+        "fields": [
+          "profile.phone",
+          "health.cognitive_status",
+          "health.independence"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-12-29T23:27:36Z",
+        "caretaker": "reha",
+        "actions": [
+          {
+            "key": "bathing-shower-assistance"
+          },
+          {
+            "key": "injections-iv-therapy"
+          },
+          {
+            "key": "meal-refused"
+          }
+        ]
+      },
+      {
+        "date": "2025-08-28T15:35:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "in-bed-body-cleaning"
+          },
+          {
+            "key": "feeding-assistance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "4fa998ab-2090-44b5-9df6-13f3460d7624",
+      "active": true,
+      "created_at": "2023-01-17T08:45:44Z",
+      "updated_at": "2023-05-09T22:23:19Z",
+      "created_by": "atesh",
+      "updated_by": "reha",
+      "first_name": "Ali",
+      "last_name": "Kaya",
+      "date_of_birth": "1943-07-16",
+      "birthplace": "Antalya",
+      "nationality": "TR",
+      "identification_number": "83644089268",
+      "address": "Cumhuriyet Mah, Ataturk Sk. No:83 D:25, Kocaeli",
+      "blood_type": "b rh-",
+      "home_phone": "2222462873",
+      "mobile_phone": "5394270866",
+      "gender": "male",
+      "responsible_staff": "mehmet",
+      "image": null,
+      "image_file": null,
+      "room": "A-115"
+    },
+    "health": {
+      "independence": "partial-assistance",
+      "mobility": "bedridden",
+      "motor_function": "limited-hand-function",
+      "cognitive_status": "mild-cognitive-impairment",
+      "chronic_illness": "Coronary artery disease history.",
+      "medications": "Donepezil nightly.",
+      "allergies": "Dust mites.",
+      "medical_history": "Cataract surgery in 2014.",
+      "relatives": "Halil Kaya (son) - 5326464283",
+      "vision": "impaired",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": true,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": false,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2022-03-10T16:15:15Z",
+        "user_id": "mehmet",
+        "fields": [
+          "equipment_used.oxygen",
+          "profile.address",
+          "profile.phone"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2025-11-05T00:39:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "iv-nutrition"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          },
+          {
+            "key": "injections-iv-therapy"
+          },
+          {
+            "key": "medication-administration"
+          }
+        ]
+      },
+      {
+        "date": "2025-10-31T20:23:36Z",
+        "caretaker": "atesh",
+        "actions": [
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "110/70 mmHg"
+          },
+          {
+            "key": "room-cleaning-tidying"
+          },
+          {
+            "key": "meal-refused"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "profile": {
+      "uuid": "fcee33e5-dab1-45a1-b45f-2b2d8336cb55",
+      "active": true,
+      "created_at": "2021-03-22T02:38:59Z",
+      "updated_at": "2023-07-12T21:23:35Z",
+      "created_by": "mehmet",
+      "updated_by": "atesh",
+      "first_name": "Seda",
+      "last_name": "Acar",
+      "date_of_birth": "1944-05-13",
+      "birthplace": "Adana",
+      "nationality": "TR",
+      "identification_number": "55609320489",
+      "address": "Ataturk Mah, Sehitler Sk. No:26 D:22, Balikesir",
+      "blood_type": "a rh-",
+      "home_phone": "2327854777",
+      "mobile_phone": "5375228728",
+      "gender": "female",
+      "responsible_staff": "huseyin",
+      "image": "/api/residents/fcee33e5-dab1-45a1-b45f-2b2d8336cb55/image",
+      "image_file": "female-3.jpg",
+      "room": null
+    },
+    "health": {
+      "independence": "full-care",
+      "mobility": "wheelchair-dependent",
+      "motor_function": "fine-motor-difficulty",
+      "cognitive_status": "dementia-alzheimers-symptoms",
+      "chronic_illness": "",
+      "medications": "Metformin, amlodipine, aspirin.",
+      "allergies": "Seasonal pollen.",
+      "medical_history": "Appendectomy in 1980.",
+      "relatives": "Ayse Acar (daughter) - 5536645013 / ayse.acar@gmail.com; Ali Acar (nephew) - 5523651046 / ali.acar@yahoo.com",
+      "vision": "blind",
+      "hearing": "normal"
+    },
+    "equipment_used": {
+      "artificial_pacemaker": false,
+      "catheter": false,
+      "chemotherapy_port": false,
+      "cochlear_implant": false,
+      "contact_lens": false,
+      "cpap": false,
+      "eyeglasses": false,
+      "hearing_aid": false,
+      "cardio_defibrillator_iacd": false,
+      "insulin_pump": false,
+      "oxygen": false,
+      "prosthetic_heart_valves": true,
+      "bioprosthetic": false
+    },
+    "update_log": [
+      {
+        "date": "2023-03-04T12:07:22Z",
+        "user_id": "korhan",
+        "fields": [
+          "profile.phone"
+        ]
+      },
+      {
+        "date": "2023-01-25T04:16:16Z",
+        "user_id": "huseyin",
+        "fields": [
+          "equipment_used.oxygen"
+        ]
+      }
+    ],
+    "visits": [
+      {
+        "date": "2026-01-06T17:04:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "assisted-walking"
+          },
+          {
+            "key": "wheelchair-use"
+          },
+          {
+            "key": "medical-reporting-referrals"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "110/70 mmHg"
+          },
+          {
+            "key": "dressing-undressing-assistance"
+          },
+          {
+            "key": "disinfection"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-23T02:14:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "wound-care-dressing"
+          },
+          {
+            "key": "transfers-bed-to-chair"
+          },
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "iv-nutrition"
+          },
+          {
+            "key": "odor-control"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-29T02:04:36Z",
+        "caretaker": "korhan",
+        "actions": [
+          {
+            "key": "odor-control"
+          },
+          {
+            "key": "regular-meals"
+          },
+          {
+            "key": "toileting-incontinence-care"
+          },
+          {
+            "key": "blood-pressure",
+            "value": "120/80 mmHg"
+          },
+          {
+            "key": "companionship-emotional-support"
+          }
+        ]
+      },
+      {
+        "date": "2025-11-06T13:37:36Z",
+        "caretaker": "huseyin",
+        "actions": [
+          {
+            "key": "feeding-assistance"
+          },
+          {
+            "key": "meal-refused"
+          },
+          {
+            "key": "transfers-bed-to-chair"
+          }
+        ]
+      }
+    ]
+  }
+]

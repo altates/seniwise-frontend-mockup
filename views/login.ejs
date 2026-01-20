@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/style/standard.css" rel="stylesheet">
+	<title>Seniwise Login</title>
+</head>
+
+<body>
+	<login-main>
+		<img src="/media/logo.svg" id="logo">
+		<% if (error) { %>
+			<p><%= error %></p>
+		<% } %>
+		<form method="post" action="/login">
+			<div>
+				<label for="username">Username</label>
+				<input id="username" name="username" type="text" autocomplete="username" required>
+			</div>
+			<div>
+				<label for="password">Password</label>
+				<input id="password" name="password" type="password" autocomplete="current-password" required>
+			</div>
+			<button type="submit">Sign in</button>
+		</form>
+		<span id="login-footer">&copy; 2026 Seniwise</span>
+	</login-main>
+</body>
+
+</html>

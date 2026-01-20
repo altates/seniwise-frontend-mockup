@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/style/standard.css" rel="stylesheet">
+	<link href="/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+	<link href="/fontawesome/css/all.min.css" rel="stylesheet" />
+	<%
+		const trimmedTitle = typeof title === "string" ? title.trim() : "";
+		const baseTitle = trimmedTitle && trimmedTitle.endsWith(" - Seniwise")
+			? trimmedTitle
+			: trimmedTitle
+				? `${trimmedTitle} - Seniwise`
+				: "Seniwise";
+	%>
+	<title><%= baseTitle %></title>
+</head>
+
+<body>
+
+<sui-container>
+
+	<sui-menu>
+		<img src="/media/logo.svg" id="main-logo" alt="Seniwise Logo">
+		<sui-menu-items>
+			<%- include("menu.ejs"); %>
+		</sui-menu-items>
+	</sui-menu>
+
+	<sui-page>
+		

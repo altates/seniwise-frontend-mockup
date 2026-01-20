@@ -1,0 +1,46 @@
+<% 
+	const menuItems = [
+		// {
+		// 	"icon": "fa-house",
+		// 	"text": "Home",
+		// 	"path": "/",
+		// },
+		{
+			"icon": "fa-address-book",
+			"text": "Residents",
+			"path": "/residents",
+		},
+		{
+			"icon": "fa-person-circle-plus",
+			"text": "Onboard Resident",
+			"path": "/onboard",
+		},
+		{
+			"icon": "fa-download",
+			"text": "Import / Export",
+			"path": "/import-export",
+		},
+		{
+			"icon": "fa-bell",
+			"text": "Notifications",
+			"path": "/notifications",
+		},
+		{
+			"icon": "fa-gear",
+			"text": "Settings",
+			"path": "/settings",
+		}
+	]
+%>
+
+<% menuItems.forEach((item) => { %>
+	<%
+		const hasPath = typeof locals.current_path === "string";
+		const isRoot = item.path === "/";
+		const isSelected = hasPath && (isRoot ? locals.current_path === "/" : locals.current_path.startsWith(item.path));
+	%>
+	<a href="<%= item.path %>" class="<%= isSelected ? "selected" : "" %>">
+		<i class="fa-solid <%= item.icon %>"></i>
+		<p><%= item.text %></p>
+	</a>
+<% }); %>

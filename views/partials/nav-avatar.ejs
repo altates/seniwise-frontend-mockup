@@ -1,0 +1,14 @@
+<%
+	const session = locals.session;
+	const name = session ? session.name : "Seniwise";
+	const initials = session
+		? session.name.split(" ").filter(Boolean).map((part) => part[0]).join("").slice(0, 2).toUpperCase()
+		: "SW";
+%>
+
+<sui-avatar-menu>
+	<sui-avatar>
+		<p><%= initials %></p>
+	</sui-avatar>
+	<p><%= name %></p>
+</sui-avatar-menu>

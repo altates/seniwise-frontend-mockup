@@ -1,0 +1,228 @@
+<%- include("./partials/head", { title: resident_name + " - Residents" }) %>
+
+<sui-navigation>
+	<a href="/residents/"><h2>Residents</h2></a>
+	<h2><%= resident_name %></h2>
+	<%- include("./partials/nav-avatar"); %>
+</sui-navigation>
+
+<sui-contents class="padded resident-hero">
+	<%
+		const profile = resident.profile || {};
+		const photoSrc = profile.image?.value || "/media/default-avatar.png";
+		const statusLabel = profile.active?.label || "Status";
+		const statusValue = profile.active?.value ? "Active" : "Inactive";
+		const createdAtLabel = profile.created_at?.label || "Created";
+		const createdAtValue = profile.created_at?.value ?? "";
+		const createdByValue = profile.created_by?.value ?? "";
+		const updatedAtLabel = profile.updated_at?.label || "Updated";
+		const updatedAtValue = profile.updated_at?.value ?? "";
+		const updatedByValue = profile.updated_by?.value ?? "";
+		const lastVisitLabel = resident.last_visit?.label || "Last Visit";
+		const lastVisitValue = resident.last_visit?.display || "-";
+		const createdAtRelative = tools.formatRelative(createdAtValue);
+		const updatedAtRelative = tools.formatRelative(updatedAtValue);
+		const hiddenProfileKeys = [
+			"location",
+			"created_at",
+			"created_by",
+			"updated_at",
+			"updated_by",
+		];
+	%>
+	<div class="resident-hero-main">
+		<div class="resident-photo">
+			<img src="<%= photoSrc %>" alt="<%= resident_name %>">
+		</div>
+		<div class="resident-tools">
+			<a href="#" class="highlight"><i class="fa-solid fa-plus"></i> Add Visit</a>
+			<a href="#" class="disabled">Save Changes</a>
+			<a href="#" class="">Export</a>
+			<a href="#" class="">Print</a>
+			<a href="#" class="dangerous">Delete</a>
+		</div>
+	</div>
+	<div class="resident-hero-meta">
+		<div class="resident-meta-card">
+			<span class="resident-meta-label"><%= statusLabel %></span>
+			<span class="resident-meta-value"><%= statusValue %></span>
+		</div>
+		<div class="resident-meta-card">
+			<span class="resident-meta-label"><%= createdAtLabel %></span>
+			<span class="resident-meta-value"><%= createdAtRelative || "-" %> - <%= createdByValue || "-" %></span>
+		</div>
+		<div class="resident-meta-card">
+			<span class="resident-meta-label"><%= updatedAtLabel %></span>
+			<span class="resident-meta-value"><%= updatedAtRelative || "-" %> - <%= updatedByValue || "-" %></span>
+		</div>
+		<div class="resident-meta-card">
+			<span class="resident-meta-label"><%= lastVisitLabel %></span>
+			<span class="resident-meta-value"><%= lastVisitValue %></span>
+		</div>
+	</div>
+</sui-contents>
+
+<sui-contents class="container resident-tabs">
+	<sui-tabs>
+		<sui-tab-list>
+			<a class="sui-tab <%= active_tab === "overview" ? "is-active" : "" %>" href="?tab=overview">Overview</a>
+			<a class="sui-tab <%= active_tab === "visits" ? "is-active" : "" %>" href="?tab=visits">Visit History</a>
+			<a class="sui-tab <%= active_tab === "edit-log" ? "is-active" : "" %>" href="?tab=edit-log">Edit Log</a>
+		</sui-tab-list>
+
+		<sui-tab-panels>
+			<sui-tab-panel class="<%= active_tab === "overview" ? "is-active" : "" %>">
+				<div class="resident-grid">
+					<sui-content-box>
+						<sui-content-box-title>Profile</sui-content-box-title>
+						<sui-content-box-inner>
+							<% Object.entries(profile).forEach(([key, field]) => { %>
+								<%
+									if (hiddenProfileKeys.indexOf(key) !== -1 || field.hidden) {
+										return;
+									}
+								%>
+								<label for="profile-<%= key %>"><%= field.label %></label>
+								<% if (field.readonly) { %>
+									<div class="resident-readonly"><%= field.value ?? "" %></div>
+								<% } else if (field.options && field.options.length) { %>
+									<select id="profile-<%= key %>" name="profile-<%= key %>">
+										<% field.options.forEach((option) => { %>
+											<option value="<%= option.value %>" <%= option.value === field.value ? "selected" : "" %>>
+												<%= option.label %>
+											</option>
+										<% }) %>
+									</select>
+								<% } else if (field.input_type === "textarea") { %>
+									<textarea
+										id="profile-<%= key %>"
+										name="profile-<%= key %>"
+										rows="3"
+									><%= field.value ?? "" %></textarea>
+								<% } else if (typeof field.value === "boolean") { %>
+									<input
+										type="checkbox"
+										id="profile-<%= key %>"
+										name="profile-<%= key %>"
+										<%= field.value ? "checked" : "" %>
+									/>
+								<% } else { %>
+									<input
+										class="blend-in"
+										type="text"
+										id="profile-<%= key %>"
+										name="profile-<%= key %>"
+										value="<%= field.value ?? "" %>"
+									/>
+								<% } %>
+							<% }) %>
+						</sui-content-box-inner>
+					</sui-content-box>
+
+					<sui-content-box>
+						<sui-content-box-title>Health Snapshot</sui-content-box-title>
+						<sui-content-box-inner>
+							<% Object.entries(resident.health).forEach(([key, field]) => { %>
+								<label for="health-<%= key %>"><%= field.label %></label>
+								<% if (field.options && field.options.length) { %>
+									<select id="health-<%= key %>" name="health-<%= key %>">
+										<% field.options.forEach((option) => { %>
+											<option value="<%= option.value %>" <%= option.value === field.value ? "selected" : "" %>>
+												<%= option.label %>
+											</option>
+										<% }) %>
+									</select>
+								<% } else if (field.input_type === "textarea") { %>
+									<textarea
+										id="health-<%= key %>"
+										name="health-<%= key %>"
+										rows="3"
+									><%= field.value ?? "" %></textarea>
+								<% } else if (typeof field.value === "boolean") { %>
+									<input
+										type="checkbox"
+										id="health-<%= key %>"
+										name="health-<%= key %>"
+										<%= field.value ? "checked" : "" %>
+									/>
+								<% } else { %>
+									<input
+										class="blend-in"
+										type="text"
+										id="health-<%= key %>"
+										name="health-<%= key %>"
+										value="<%= field.value ?? "" %>"
+									/>
+								<% } %>
+								<% if (field.notes) { %>
+									<small><%= field.notes %></small>
+								<% } %>
+							<% }) %>
+						</sui-content-box-inner>
+					</sui-content-box>
+
+					<sui-content-box>
+						<sui-content-box-title>Equipment Used</sui-content-box-title>
+						<sui-content-box-inner>
+							<% Object.entries(resident.equipment_used).forEach(([key, field]) => { %>
+								<div class="checkbox-row">
+									<input
+										type="checkbox"
+										id="equipment-<%= key %>"
+										name="equipment-<%= key %>"
+										<%= field.value ? "checked" : "" %>
+									/>
+									<label for="equipment-<%= key %>"><%= field.label %></label>
+								</div>
+							<% }) %>
+						</sui-content-box-inner>
+					</sui-content-box>
+
+				</div>
+			</sui-tab-panel>
+
+			<sui-tab-panel class="<%= active_tab === "visits" ? "is-active" : "" %>">
+				<div class="flex-grid">
+					<% if (resident.visits.entries.length) { %>
+						<% resident.visits.entries.forEach((visit, index) => { %>
+							<sui-content-box class="resident-visit-entry with-padding">
+								<p><strong><%= visit.date.label %>:</strong> <%= visit.date.value %></p>
+								<p><strong><%= visit.caretaker.label %>:</strong> <%= visit.caretaker.value %></p>
+								<ul class="actions-taken">
+									<% visit.actions.items.forEach((action) => { %>
+										<li>
+											<b><%= action.label %></b>
+											<% if (action.value && action.value != true) { %>
+												: <%= action.value %>
+											<% } %>
+										</li>
+									<% }) %>
+								</ul>
+							</sui-content-box>
+						<% }) %>
+					<% } else { %>
+						<p>No visits logged.</p>
+					<% } %>
+				</div>
+			</sui-tab-panel>
+
+			<sui-tab-panel class="<%= active_tab === "edit-log" ? "is-active" : "" %>">
+				<div class="flex-grid">
+					<% resident.update_log.entries.forEach((entry, index) => { %>
+						<sui-content-box class="resident-log-entry">
+							<strong>Update <%= index + 1 %></strong>
+							<p><strong><%= entry.date.label %>:</strong> <%= entry.date.value %></p>
+							<p><strong><%= entry.user_id.label %>:</strong> <%= entry.user_id.value %></p>
+							<p>
+								<strong><%= entry.fields.label %>:</strong>
+								<%= Array.isArray(entry.fields.value) ? entry.fields.value.join(", ") : entry.fields.value %>
+							</p>
+						</sui-content-box>
+					<% }) %>
+				</div>
+			</sui-tab-panel>
+		</sui-tab-panels>
+	</sui-tabs>
+</sui-contents>
+
+<%- include("./partials/foot") %>

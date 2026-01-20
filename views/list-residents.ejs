@@ -1,0 +1,26 @@
+<%- include("./partials/head", { title: "Residents" }) %>
+
+<sui-navigation>
+	<h2>Residents</h2>
+	<%- include("./partials/nav-avatar"); %>
+</sui-navigation>
+
+<sui-contents class="padded">
+	<div id="residents-table" data-api-host="<%= api_host %>"></div>
+</sui-contents>
+
+<script src="/scripts/tableview.js"></script>
+<script>
+	const tableContainer = document.getElementById("residents-table");
+	if (tableContainer && window.TableView) {
+		const apiHost = tableContainer.dataset.apiHost || "";
+		const dataUrl = apiHost ? `${apiHost}/api/residents` : "/api/residents";
+		new window.TableView(tableContainer, {
+			dataUrl,
+			initialSortBy: "name",
+			initialSortOrder: "asc",
+		});
+	}
+</script>
+
+<%- include("./partials/foot") %>
