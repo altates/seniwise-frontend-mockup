@@ -99,6 +99,7 @@ const PROFILE_FIELD_ORDER = [
 	"blood_type",
 	"home_phone",
 	"mobile_phone",
+	"relatives",
 ];
 
 /**
@@ -119,7 +120,7 @@ const PROFILE_READONLY_FIELDS = new Set([
 /**
  * @type {Set<string>}
  */
-const PROFILE_TEXTAREA_FIELDS = new Set(["address"]);
+const PROFILE_TEXTAREA_FIELDS = new Set(["address", "relatives"]);
 
 /**
  * @type {string[]}
@@ -148,7 +149,6 @@ const HEALTH_TEXTAREA_FIELDS = new Set([
 	"medications",
 	"allergies",
 	"medical_history",
-	"relatives",
 ]);
 
 /**
@@ -216,6 +216,31 @@ const formatVisitDate = (dateValue) => {
 };
 
 /**
+ * Build a display string that includes relative time if available.
+ * @param {string} dateValue
+ * @returns {{ displayDate: string, relative: string, display: string }}
+ */
+const formatDateDisplay = (dateValue) => {
+	const { displayDate, relative } = formatVisitDate(dateValue);
+	const display = displayDate ? `${displayDate}${relative ? ` (${relative})` : ""}` : "";
+	return { displayDate, relative, display };
+};
+
+/**
+ * Normalize a date string into a sortable timestamp.
+ * @param {string | null | undefined} value
+ * @returns {number}
+ */
+const toTimestamp = (value) => {
+	if (!value || typeof value !== "string") {
+		return 0;
+	}
+	const parsed = new Date(value);
+	const time = parsed.getTime();
+	return Number.isNaN(time) ? 0 : time;
+};
+
+/**
  * @param {Array<Record<string, any>> | undefined} visits
  * @returns {{ label: string, date: LocalizedField, relative: LocalizedField, display: string }}
  */
@@ -231,8 +256,7 @@ const buildLastVisitSummary = (visits) => {
 			}
 		}
 	}
-	const { displayDate, relative } = formatVisitDate(lastVisitDate);
-	const display = displayDate ? `${displayDate}${relative ? ` (${relative})` : ""}` : "";
+	const { displayDate, relative, display } = formatDateDisplay(lastVisitDate);
 	return {
 		label: resolveLabel("visits.last_visit", "Last Visit"),
 		date: {
@@ -264,8 +288,26 @@ const buildLocalizedResident = (resident) => {
 	const profileSelectOptions = createProfileSelectOptions();
 	/** @type {Record<string, LocalizedField>} */
 	const profile = {};
+	const profileUuid =
+		resident.profile && typeof resident.profile.uuid === "string"
+			? resident.profile.uuid
+			: "";
+	/** @type {Record<string, string | null>} */
+	const derivedProfileValues = {
+		image: profileUuid ? `/residents/${profileUuid}/image` : null,
+		relatives:
+			resident.profile && resident.profile.relatives != null
+				? resident.profile.relatives
+				: resident.health && resident.health.relatives != null
+					? resident.health.relatives
+					: "",
+	};
 	for (const key of PROFILE_FIELD_ORDER) {
-		const value = resident.profile ? resident.profile[key] : null;
+		const value = Object.prototype.hasOwnProperty.call(derivedProfileValues, key)
+			? derivedProfileValues[key]
+			: resident.profile
+				? resident.profile[key]
+				: null;
 		const normalizedValue =
 			key === "image" || key === "room"
 				? value === undefined
@@ -332,11 +374,13 @@ const buildLocalizedResident = (resident) => {
 
 	/** @type {Array<Record<string, LocalizedField>>} */
 	const updateLogEntries = Array.isArray(resident.update_log)
-		? resident.update_log.map(
+		? [...resident.update_log]
+				.sort((a, b) => toTimestamp(b.date) - toTimestamp(a.date))
+				.map(
 				/** @param {Record<string, any>} entry */
 				(entry) => ({
 					date: {
-						value: entry.date || "",
+						value: formatDateDisplay(entry.date || "").display,
 						label: resolveLabel("update_log.date", "Date"),
 					},
 					user_id: {
@@ -353,9 +397,12 @@ const buildLocalizedResident = (resident) => {
 
 	/** @type {LocalizedVisitEntry[]} */
 	const visitsEntries = Array.isArray(resident.visits)
-		? resident.visits.map(
+		? [...resident.visits]
+				.sort((a, b) => toTimestamp(b.date) - toTimestamp(a.date))
+				.map(
 				/** @param {Record<string, any>} entry */
 				(entry) => {
+					const displayDate = formatDateDisplay(entry.date || "").display;
 					const actions = Array.isArray(entry.actions)
 						? entry.actions.map(
 								/** @param {{ key: string, value?: string }} action */
@@ -381,7 +428,7 @@ const buildLocalizedResident = (resident) => {
 						: [];
 					return {
 						date: {
-							value: entry.date || "",
+							value: displayDate,
 							label: resolveLabel("visits.date", "Date"),
 						},
 						caretaker: {

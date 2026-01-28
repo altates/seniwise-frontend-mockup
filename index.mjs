@@ -197,7 +197,84 @@ app.get("/", (req, res) => {
  * @returns {void}
  */
 app.get("/residents", (req, res) => {
-	res.render("list-residents", { api_host: apiHost });
+	res.render("list-residents");
+});
+
+/**
+ * Proxy residents data for AJAX table requests.
+ * @param {import("express").Request} req
+ * @param {import("express").Response} res
+ * @returns {Promise<void>}
+ */
+app.get("/residents/json", async (req, res) => {
+	const apiUrl = new URL("/api/residents", apiHost);
+	const queryKeys = ["q", "p", "sort_by", "sort_order"];
+	for (const key of queryKeys) {
+		if (typeof req.query[key] === "string") {
+			apiUrl.searchParams.set(key, req.query[key]);
+		}
+	}
+
+	try {
+		const response = await fetch(apiUrl.toString(), {
+			headers: { Accept: "application/json" },
+		});
+		const statusCode = response.status || 502;
+		let payload = null;
+		try {
+			payload = await response.json();
+		} catch (error) {
+			payload = null;
+		}
+
+		if (!response.ok || !payload || payload.success !== true) {
+			const errorPayload =
+				payload && payload.error && typeof payload.error === "object"
+					? payload.error
+					: { code: statusCode, message: "Unable to fetch residents." };
+			res.status(errorPayload.code || statusCode).json({
+				success: false,
+				error: errorPayload,
+				result: payload ? payload.result ?? null : null,
+			});
+			return;
+		}
+
+		res.json(payload);
+	} catch (error) {
+		res.status(502).json({
+			success: false,
+			error: { code: 502, message: "Unable to reach residents API." },
+			result: null,
+		});
+	}
+});
+
+/**
+ * Proxy resident profile image requests.
+ * @param {import("express").Request} req
+ * @param {import("express").Response} res
+ * @returns {Promise<void>}
+ */
+app.get("/residents/:uuid/image", async (req, res) => {
+	const { uuid } = req.params;
+	const apiUrl = new URL(`/api/residents/${uuid}/image`, apiHost);
+
+	try {
+		const response = await fetch(apiUrl.toString());
+		if (!response.ok) {
+			res.redirect("/media/default-avatar.png");
+			return;
+		}
+		const contentType = response.headers.get("content-type");
+		if (contentType) {
+			res.setHeader("Content-Type", contentType);
+		}
+		const buffer = Buffer.from(await response.arrayBuffer());
+		res.send(buffer);
+	} catch (error) {
+		res.redirect("/media/default-avatar.png");
+	}
 });
 
 /**

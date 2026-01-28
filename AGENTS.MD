@@ -13,14 +13,15 @@
   * / -> Homepage
   * /residents -> Residents list
     * /residents/<UUID> -> View resident
+  * /residents/json -> Residents list (AJAX proxy)
   * /onboarding -> Onboard patient/resident
   * /notifications
   * /settings
   * /login (if logged out)
   * /logout (if logged in)
 * This is a mockup server running to provide these files + some fake APIs we can use.
-  * Our server must provide the API. Views where we fetch data must use this API.
-  * So, we need to have `/api/residents/:uuid` and `/residents/:uuid` should internally fetch and utilize the API endpoint.
+  * `/api/...` represents the external API host (mocked locally for now). Client-side code must never call `/api` directly.
+  * Use proxy endpoints on the frontend server (e.g., `/residents/json`, `/residents/:uuid`, `/residents/:uuid/image`) to fetch data/images from the API host and wrap responses.
 * The following files are used and should be updated as we go:
   * `demo_users.js` -> Demo table for users.
   * `demo_residents.json` -> Demo table for residents.

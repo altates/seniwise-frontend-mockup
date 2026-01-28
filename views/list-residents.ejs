@@ -6,15 +6,14 @@
 </sui-navigation>
 
 <sui-contents class="padded">
-	<div id="residents-table" data-api-host="<%= api_host %>"></div>
+	<div id="residents-table" data-api-url="/residents/json"></div>
 </sui-contents>
 
 <script src="/scripts/tableview.js"></script>
 <script>
 	const tableContainer = document.getElementById("residents-table");
 	if (tableContainer && window.TableView) {
-		const apiHost = tableContainer.dataset.apiHost || "";
-		const dataUrl = apiHost ? `${apiHost}/api/residents` : "/api/residents";
+		const dataUrl = tableContainer.dataset.apiUrl || "/residents/json";
 		new window.TableView(tableContainer, {
 			dataUrl,
 			initialSortBy: "name",

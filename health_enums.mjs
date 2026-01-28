@@ -177,11 +177,6 @@ export const HEALTH_FREE_TEXT_FIELDS = [
 		label_key: "health.free-text.medical-history",
 		notes_key: "health.free-text.medical-history.notes",
 	},
-	{
-		key: "relatives",
-		label_key: "health.free-text.relatives",
-		notes_key: "health.free-text.relatives.notes",
-	},
 ];
 
 /**
