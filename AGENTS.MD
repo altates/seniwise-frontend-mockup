@@ -37,6 +37,8 @@
 * Before making changes, ask if you have any questions and give me a summary of changes you'll be doing.
   * Do not make changes before confirmation.
 * After making changes, give me the summary again.
+* Do not hard-break lines when writing code.
+* Use the shared `labels()` helper for localization (EJS + server); it supports `$1` formatting, `\$` for literal `$`, and returns `INVALID_KEY("...")` when missing.
 
 # Authentication
 

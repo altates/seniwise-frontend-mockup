@@ -7,9 +7,10 @@ import express from "express";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import labelsEnUs from "./labels_en_us.mjs";
 import demoUsers from "./demo_users.js";
 import { buildLocalizedResident } from "./resident_localization.mjs";
+import { VISIT_CATEGORIES } from "./health_enums.mjs";
+import { labels } from "./tools.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -45,43 +46,54 @@ const RESIDENTS_SORT_FIELDS = [
 ];
 
 /**
+ * Resolve labels with a fallback when the key is missing.
+ * @param {string} key
+ * @param {string} fallback
+ * @returns {string}
+ */
+const resolveLabel = (key, fallback) => {
+	const resolved = labels(key);
+	return resolved.startsWith("INVALID_KEY(") ? fallback : resolved;
+};
+
+/**
  * @type {Array<{ key: string, label: string, sortable: boolean, sort_key: string, link_template?: string }>}
  */
 const RESIDENTS_LIST_COLUMNS = [
 	{
 		key: "name",
-		label: labelsEnUs["residents.column.name"] || "Name",
+		label: resolveLabel("residents.column.name", "Name"),
 		sortable: true,
 		sort_key: "name",
 		link_template: "/residents/{uuid}",
 	},
 	{
 		key: "responsible_staff",
-		label: labelsEnUs["residents.column.responsible_staff"] || "Responsible Staff",
+		label: resolveLabel("residents.column.responsible_staff", "Responsible Staff"),
 		sortable: true,
 		sort_key: "responsible_staff",
 	},
 	{
 		key: "birth_date",
-		label: labelsEnUs["residents.column.birth_date"] || "Birth Date",
+		label: resolveLabel("residents.column.birth_date", "Birth Date"),
 		sortable: true,
 		sort_key: "birth_date",
 	},
 	{
 		key: "room",
-		label: labelsEnUs["residents.column.room"] || "Room",
+		label: resolveLabel("residents.column.room", "Room"),
 		sortable: true,
 		sort_key: "room",
 	},
 	{
 		key: "gender_short",
-		label: labelsEnUs["residents.column.gender"] || "Gender",
+		label: resolveLabel("residents.column.gender", "Gender"),
 		sortable: true,
 		sort_key: "gender",
 	},
 	{
 		key: "last_visit_display",
-		label: labelsEnUs["residents.column.last_visit"] || "Last Visit",
+		label: resolveLabel("residents.column.last_visit", "Last Visit"),
 		sortable: true,
 		sort_key: "last_visit_date",
 	},
@@ -137,10 +149,12 @@ const createDemoApiRouter = () => {
 				}
 			}
 			const genderValue = typeof profile.gender === "string" ? profile.gender : "";
-			const genderShort =
-				labelsEnUs[`gender.short.${genderValue}`] || (genderValue ? genderValue[0].toUpperCase() : "");
-			const genderLong =
-				labelsEnUs[`gender.long.${genderValue}`] || genderValue;
+			const genderShort = genderValue
+				? resolveLabel(`gender.short.${genderValue}`, genderValue[0].toUpperCase())
+				: "";
+			const genderLong = genderValue
+				? resolveLabel(`gender.long.${genderValue}`, genderValue)
+				: "";
 			const roomValue = typeof profile.room === "string" ? profile.room : "";
 			const roomDisplay = roomValue ? roomValue : "-";
 
@@ -300,7 +314,7 @@ const createDemoApiRouter = () => {
 				},
 				search: {
 					query: queryRaw,
-					placeholder: labelsEnUs["residents.search.name"] || "Search by name",
+					placeholder: resolveLabel("residents.search.name", "Search by name"),
 				},
 				sort: {
 					by: sortBy,
@@ -358,6 +372,71 @@ const createDemoApiRouter = () => {
 		}
 
 		res.sendFile(normalizedPath);
+	});
+
+	/**
+	 * Return visit categories for add-visit views.
+	 * @param {import("express").Request} req
+	 * @param {import("express").Response} res
+	 * @returns {void}
+	 */
+	router.get("/residents/:uuid/add-visit", (req, res) => {
+		const { uuid } = req.params;
+		const resident = demoResidents.find(
+			/** @param {Record<string, any>} entry */
+			(entry) => entry.profile && entry.profile.uuid === uuid
+		);
+
+		if (!resident || !resident.profile) {
+			res.status(404).json({
+				success: false,
+				error: { code: 404, message: "Resident not found." },
+				result: null,
+			});
+			return;
+		}
+
+		const profile = resident.profile || {};
+		const firstName = typeof profile.first_name === "string" ? profile.first_name : "";
+		const lastName = typeof profile.last_name === "string" ? profile.last_name : "";
+		const residentName = `${firstName} ${lastName}`.trim() || "Resident";
+		const visitCategories = VISIT_CATEGORIES.map((category) => ({
+			key: category.key,
+			label: resolveLabel(category.label_key, category.label_key),
+			icon: category.icon,
+			actions: [
+				...category.actions.map((action) => ({
+					key: action.key,
+					label: resolveLabel(action.label_key, action.label_key),
+					icon: action.icon,
+					type: action.type,
+				})),
+				...category.groups.map((group) => ({
+					key: group.key,
+					label: resolveLabel(group.label_key, group.label_key),
+					icon: group.icon,
+					type: "group",
+					actions: group.actions.map((action) => ({
+						key: action.key,
+						label: resolveLabel(action.label_key, action.label_key),
+						icon: action.icon,
+						type: action.type,
+					})),
+				})),
+			],
+		}));
+
+		res.json({
+			success: true,
+			error: null,
+			result: {
+				resident: {
+					uuid: profile.uuid || "",
+					name: residentName,
+				},
+				visit_categories: visitCategories,
+			},
+		});
 	});
 
 	/**

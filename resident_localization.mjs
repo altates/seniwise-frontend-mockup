@@ -3,7 +3,6 @@
  * @format
  */
 
-import labelsEnUs from "./labels_en_us.mjs";
 import demoUsers from "./demo_users.js";
 import {
 	HEALTH_ENUM_GROUPS,
@@ -11,6 +10,7 @@ import {
 	HEALTH_EQUIPMENT_FIELDS,
 	VISIT_CATEGORIES,
 } from "./health_enums.mjs";
+import { labels } from "./tools.mjs";
 
 /**
  * @typedef {Object} LocalizedField
@@ -277,7 +277,10 @@ const buildLastVisitSummary = (visits) => {
  * @param {string} fallback
  * @returns {string}
  */
-const resolveLabel = (labelKey, fallback) => labelsEnUs[labelKey] || fallback;
+const resolveLabel = (labelKey, fallback) => {
+	const resolved = labels(labelKey);
+	return resolved.startsWith("INVALID_KEY(") ? fallback : resolved;
+};
 
 /**
  * Build the localized payload for a resident.

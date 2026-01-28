@@ -242,6 +242,7 @@ export const HEALTH_EQUIPMENT_FIELDS = [
  * @typedef {Object} VisitAction
  * @property {string} key
  * @property {string} label_key
+ * @property {string} icon
  * @property {"boolean" | "text"} type
  */
 
@@ -249,6 +250,7 @@ export const HEALTH_EQUIPMENT_FIELDS = [
  * @typedef {Object} VisitGroup
  * @property {string} key
  * @property {string} label_key
+ * @property {string} icon
  * @property {VisitAction[]} actions
  */
 
@@ -256,6 +258,7 @@ export const HEALTH_EQUIPMENT_FIELDS = [
  * @typedef {Object} VisitCategory
  * @property {string} key
  * @property {string} label_key
+ * @property {string} icon
  * @property {VisitAction[]} actions
  * @property {VisitGroup[]} groups
  */
@@ -268,25 +271,30 @@ export const VISIT_CATEGORIES = [
 	{
 		key: "medical-care",
 		label_key: "visits.category.medical-care",
+		icon: "fa-briefcase-medical",
 		actions: [
 			{
 				key: "medication-administration",
 				label_key: "visits.action.medication-administration",
+				icon: "fa-pills",
 				type: "boolean",
 			},
 			{
 				key: "wound-care-dressing",
 				label_key: "visits.action.wound-care-dressing",
+				icon: "fa-bandage",
 				type: "boolean",
 			},
 			{
 				key: "injections-iv-therapy",
 				label_key: "visits.action.injections-iv-therapy",
+				icon: "fa-syringe",
 				type: "boolean",
 			},
 			{
 				key: "medical-reporting-referrals",
 				label_key: "visits.action.medical-reporting-referrals",
+				icon: "fa-file-medical",
 				type: "boolean",
 			},
 		],
@@ -294,25 +302,30 @@ export const VISIT_CATEGORIES = [
 			{
 				key: "vital-measurements",
 				label_key: "visits.group.vital-measurements",
+				icon: "fa-stethoscope",
 				actions: [
 					{
 						key: "blood-pressure",
 						label_key: "visits.action.blood-pressure",
+						icon: "fa-heart-pulse",
 						type: "text",
 					},
 					{
 						key: "pulse",
 						label_key: "visits.action.pulse",
+						icon: "fa-wave-square",
 						type: "text",
 					},
 					{
 						key: "temperature",
 						label_key: "visits.action.temperature",
+						icon: "fa-thermometer-half",
 						type: "text",
 					},
 					{
 						key: "oxygen-saturation",
 						label_key: "visits.action.oxygen-saturation",
+						icon: "fa-lungs",
 						type: "text",
 					},
 				],
@@ -322,25 +335,30 @@ export const VISIT_CATEGORIES = [
 	{
 		key: "personal-care",
 		label_key: "visits.category.personal-care",
+		icon: "fa-user-nurse",
 		actions: [
 			{
 				key: "toileting-incontinence-care",
 				label_key: "visits.action.toileting-incontinence-care",
+				icon: "fa-toilet",
 				type: "boolean",
 			},
 			{
 				key: "dressing-undressing-assistance",
 				label_key: "visits.action.dressing-undressing-assistance",
+				icon: "fa-shirt",
 				type: "boolean",
 			},
 			{
 				key: "feeding-assistance",
 				label_key: "visits.action.feeding-assistance",
+				icon: "fa-utensils",
 				type: "boolean",
 			},
 			{
 				key: "companionship-emotional-support",
 				label_key: "visits.action.companionship-emotional-support",
+				icon: "fa-heart",
 				type: "boolean",
 			},
 		],
@@ -348,25 +366,30 @@ export const VISIT_CATEGORIES = [
 			{
 				key: "personal-hygiene",
 				label_key: "visits.group.personal-hygiene",
+				icon: "fa-shower",
 				actions: [
 					{
 						key: "in-bed-body-cleaning",
 						label_key: "visits.action.in-bed-body-cleaning",
+						icon: "fa-bed",
 						type: "boolean",
 					},
 					{
 						key: "bathing-shower-assistance",
 						label_key: "visits.action.bathing-shower-assistance",
+						icon: "fa-shower",
 						type: "boolean",
 					},
 					{
 						key: "hair-cutting-care",
 						label_key: "visits.action.hair-cutting-care",
+						icon: "fa-scissors",
 						type: "boolean",
 					},
 					{
 						key: "nail-care",
 						label_key: "visits.action.nail-care",
+						icon: "fa-hand-sparkles",
 						type: "boolean",
 					},
 				],
@@ -374,20 +397,24 @@ export const VISIT_CATEGORIES = [
 			{
 				key: "mobility-support",
 				label_key: "visits.group.mobility-support",
+				icon: "fa-person-walking",
 				actions: [
 					{
 						key: "assisted-walking",
 						label_key: "visits.action.assisted-walking",
+						icon: "fa-walking",
 						type: "boolean",
 					},
 					{
 						key: "transfers-bed-to-chair",
 						label_key: "visits.action.transfers-bed-to-chair",
+						icon: "fa-exchange-alt",
 						type: "boolean",
 					},
 					{
 						key: "wheelchair-use",
 						label_key: "visits.action.wheelchair-use",
+						icon: "fa-wheelchair",
 						type: "boolean",
 					},
 				],
@@ -397,25 +424,30 @@ export const VISIT_CATEGORIES = [
 	{
 		key: "housekeeping",
 		label_key: "visits.category.housekeeping",
+		icon: "fa-broom",
 		actions: [
 			{
 				key: "room-cleaning-tidying",
 				label_key: "visits.action.room-cleaning-tidying",
+				icon: "fa-broom",
 				type: "boolean",
 			},
 			{
 				key: "laundry-clothing-care",
 				label_key: "visits.action.laundry-clothing-care",
+				icon: "fa-soap",
 				type: "boolean",
 			},
 			{
 				key: "bed-linen-changes",
 				label_key: "visits.action.bed-linen-changes",
+				icon: "fa-bed",
 				type: "boolean",
 			},
 			{
 				key: "shared-space-maintenance",
 				label_key: "visits.action.shared-space-maintenance",
+				icon: "fa-users",
 				type: "boolean",
 			},
 		],
@@ -423,15 +455,18 @@ export const VISIT_CATEGORIES = [
 			{
 				key: "environmental-hygiene",
 				label_key: "visits.group.environmental-hygiene",
+				icon: "fa-spray-can",
 				actions: [
 					{
 						key: "disinfection",
 						label_key: "visits.action.disinfection",
+						icon: "fa-spray-can-sparkles",
 						type: "boolean",
 					},
 					{
 						key: "odor-control",
 						label_key: "visits.action.odor-control",
+						icon: "fa-wind",
 						type: "boolean",
 					},
 				],
@@ -441,35 +476,42 @@ export const VISIT_CATEGORIES = [
 	{
 		key: "supportive-services",
 		label_key: "visits.category.supportive-services",
+		icon: "fa-handshake-angle",
 		actions: [],
 		groups: [
 			{
 				key: "meal-service-dietary-monitoring",
 				label_key: "visits.group.meal-service-dietary-monitoring",
+				icon: "fa-utensils",
 				actions: [
 					{
 						key: "regular-meals",
 						label_key: "visits.action.regular-meals",
+						icon: "fa-utensils",
 						type: "boolean",
 					},
 					{
 						key: "tube-feeding",
 						label_key: "visits.action.tube-feeding",
+						icon: "fa-hand-holding-medical",
 						type: "boolean",
 					},
 					{
 						key: "iv-nutrition",
 						label_key: "visits.action.iv-nutrition",
+						icon: "fa-vial",
 						type: "boolean",
 					},
 					{
 						key: "other-nutrition-methods",
 						label_key: "visits.action.other-nutrition-methods",
+						icon: "fa-bottle-water",
 						type: "boolean",
 					},
 					{
 						key: "meal-refused",
 						label_key: "visits.action.meal-refused",
+						icon: "fa-ban",
 						type: "boolean",
 					},
 				],
@@ -477,15 +519,18 @@ export const VISIT_CATEGORIES = [
 			{
 				key: "activity-support",
 				label_key: "visits.group.activity-support",
+				icon: "fa-people-group",
 				actions: [
 					{
 						key: "rehabilitation-exercises",
 						label_key: "visits.action.rehabilitation-exercises",
+						icon: "fa-dumbbell",
 						type: "boolean",
 					},
 					{
 						key: "group-activities",
 						label_key: "visits.action.group-activities",
+						icon: "fa-users",
 						type: "boolean",
 					},
 				],

@@ -78,6 +78,7 @@ app.use((req, res, next) => {
  */
 app.use((req, res, next) => {
 	res.locals.tools = viewTools;
+	res.locals.labels = viewTools.labels;
 	next();
 });
 
@@ -311,6 +312,55 @@ app.get("/residents/:uuid", async (req, res) => {
 		resident_name: residentName || "Resident",
 		active_tab: activeTab,
 	});
+});
+
+/**
+ * Render the resident "Add Visit" page.
+ * @param {import("express").Request} req
+ * @param {import("express").Response} res
+ * @returns {void}
+ */
+app.get("/residents/:uuid/add-visit", async (req, res) => {
+	const { uuid } = req.params;
+	const apiResponse = await fetch(`${apiHost}/api/residents/${uuid}/add-visit`);
+
+	if (!apiResponse.ok) {
+		res.status(404).render("404", { message: "Resident not found." });
+		return;
+	}
+
+	const payload = await apiResponse.json();
+	if (!payload || payload.success !== true || !payload.result) {
+		res.status(404).render("404", { message: "Resident not found." });
+		return;
+	}
+
+	const resident = payload.result && typeof payload.result.resident === "object" ? payload.result.resident : {};
+	const visitCategories = Array.isArray(payload.result.visit_categories) ? payload.result.visit_categories: [];
+	const residentPayload = {
+		uuid,
+		...resident,
+	};
+
+	res.render("add-visit", {
+		resident: residentPayload,
+		visit_categories: visitCategories,
+	});
+});
+
+/**
+ * "Accept" data from the resident "Add Visit" page.
+ * @param {import("express").Request} req
+ * @param {import("express").Response} res
+ * @returns {void}
+ */
+app.post("/residents/:uuid/add-visit", async (req, res) => {
+	
+	res.send(JSON.stringify({
+		"success": true,
+		"error": null
+	}));
+
 });
 
 app.use("/api", createDemoApiRouter());

@@ -1,0 +1,194 @@
+<%- include("./partials/head", { title: locals.labels("visits.add.title") }) %>
+
+<sui-navigation>
+	<a href="/residents/"><h2>Residents</h2></a>
+	<a href="/residents/<%= resident.uuid %>"><h2><%= resident.name %></h2></a>
+	<h2><%- locals.labels("visits.add.title"); %></h2>
+	<%- include("./partials/nav-avatar"); %>
+</sui-navigation>
+
+<% 
+	function renderCategoryActionItem(action) {
+		let subItems = "";
+		let chevron = "";
+		if (action.type == "group") {
+			action.actions.forEach((sa) => {
+				subItems += renderCategoryActionItem(sa);
+			});
+			subItems = `<div class="category-actions-subactions">${subItems}</div>`;
+			chevron = `<i class="fa-solid fa-arrow-down chevron"></i>`;
+		}
+		let input = "";
+		if (action.type == "text") {
+			input = `<input type="text">`;
+		}
+		if (action.type == "boolean") {
+			input = `<input type="checkbox">`;
+		}
+		return `				
+			<div class="category-action type-${action.type}" data-key="${action.key}" data-type="${action.type}">
+				<div class="label-area">
+					${chevron}
+					<i class="icon fa-solid ${action.icon}"></i>
+					<span class="label">${action.label}</span>
+					${input}
+				</div>
+				${subItems}
+			</div>`;
+	}
+
+%>
+
+<style>
+	.categories {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		padding-bottom: 20px;
+	}
+	.category-box {
+		flex-basis: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+	.category-title {
+		font-weight: 900;
+		font-size: 1.25em;
+		flex-basis: 100%;
+		margin-top: 1em;
+		padding-left: 1.0em;
+	}
+	.category-actions {
+		flex-basis: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		overflow: hidden;
+	}
+	.category-action {
+		background-color: var(--color-background);
+		flex-basis: 100%;
+		overflow: hidden;
+		border-radius: 10px;
+	}
+	.category-actions-subactions .category-action {
+		border-radius: 0;
+		border-top: 2px solid white;
+		padding-left: 2em;
+	}
+	.category-action.type-boolean .label-area:hover {
+		background-color: rgba(123, 171, 255, 0.11);
+	}
+	.category-action.type-group > .label-area {
+		/* background-color: rgb(251, 243, 255); */
+		font-weight: 900;
+	}
+	.category-action .label-area {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		height: 60px;
+		padding: 0px 1em;
+		flex-wrap: wrap;
+	}
+	.category-action.type-boolean .label-area {
+		cursor: pointer;
+	}
+	.category-action.type-text .label-area {
+		height: auto;
+		padding-top: 1em;
+	}
+	.category-action .label-area * {
+		user-select: none;
+		pointer-events: none;
+	}
+	.category-action .label-area input[type="checkbox"] {
+		appearance: none;
+		background-color: white;
+		width: 23px;
+		height: 23px;
+		border-radius: 5px;
+		border: var(--border-std);
+		order: -1;
+		pointer-events: none;
+		position: relative;
+	}
+	.category-action .label-area input[type="checkbox"]:checked {
+		background-color: var(--color-blue);
+		border-color: var(--color-blue);
+	}
+	.category-action .label-area input[type="checkbox"]:checked::after {
+		content: "\f00c";
+		color: white;
+		font-weight: 600;
+		font-family: var(--fa-family);
+		font-size: 12px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -9px;
+		margin-left: -5px;
+	}
+	.category-action .label-area input[type="text"] {
+		flex-basis: 100%;
+		pointer-events: all;
+	}
+	.category-action .label-area .chevron {
+		margin-left: 0.25em;
+		opacity: 0.35;
+	}
+	.category-action .label {
+		font-size: 1.05em;
+	}
+	.category-action.type-group {
+
+	}
+	.category-action.type-group .category-actions-subactions {
+		height: auto;
+	}
+</style>
+
+<sui-contents class="padded">
+	<form autocomplete="off">
+
+	<h1><%- locals.labels("visits.add.title") %></h1>
+	<h2><%- locals.labels("visits.add.subtitle") %></h2>
+	<div class="resident-tools" style="margin-top: 20px;">
+		<a href="#" class="disabled"><%- locals.labels("visits.add.submit")  %></a>
+	</div>
+	<div class="categories">
+	<% visit_categories.forEach((category) => { %>
+		<div class="category-box">
+			<div class="category-title"><%- category.label %></div>
+			<div class="category-actions">
+			<% category.actions.forEach((action) => { %>
+				<%- renderCategoryActionItem(action); %>
+			<% }); %>
+			</div>
+		</div>	
+	<% }); %>
+	</div>
+	<div class="resident-tools">
+		<a href="#" class="disabled"><%- locals.labels("visits.add.submit")  %></a>
+	</div>
+
+	</form>
+</sui-contents>
+
+<script>
+	[...document.querySelectorAll(".category-box .category-action .label-area")].forEach((e) => {
+		e.addEventListener("click", (el) => {
+			if (el.target.parentNode.dataset.type == "group") {
+				el.target.parentNode.classList.toggle("opened");
+				return;
+			}
+			if (el.target.parentNode.dataset.type == "boolean") {
+				el.target.parentNode.querySelector("input").checked = !el.target.parentNode.querySelector("input").checked;
+				return;
+			}
+		});
+	});
+</script>
+
+<%- include("./partials/foot") %>

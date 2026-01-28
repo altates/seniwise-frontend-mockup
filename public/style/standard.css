@@ -132,14 +132,27 @@ sui-navigation h2 {
 	position: relative;
 }
 
-sui-navigation > a + h2::before {
+sui-navigation > a {
+	flex-shrink: 0;
+	display: flex;
+	text-decoration: none;
+}
+
+sui-navigation > a h2 {
+	text-decoration: underline;
+}
+
+sui-navigation > a::after {
 	content: '\f054';
 	font-family: var(--fa-family);
-	font-size: 0.6em;
+	font-size: 1em;
 	margin-top: 0.45em;
 	margin-left: 0.66em;
 	margin-right: 0.66em;
 	color: rgb(100,100,100);
+	font-weight: 600;
+	pointer-events: none;
+	text-decoration: none;
 }
 
 sui-contents,
