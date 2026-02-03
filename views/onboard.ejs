@@ -1,0 +1,137 @@
+<%- include("./partials/head", { title: "Onboard Resident" }) %>
+
+<sui-navigation>
+	<h2>Onboard Resident</h2>
+	<%- include("./partials/nav-avatar"); %>
+</sui-navigation>
+
+<sui-contents class="container">
+
+	<form class="onboard-form" autocomplete="off">
+		<div class="onboard-grid">
+			<sui-content-box>
+				<sui-content-box-title>Profile</sui-content-box-title>
+				<sui-content-box-inner>
+					<% Object.entries(onboard_fields.profile || {}).forEach(([key, field]) => { %>
+						<label for="profile-<%= key %>"><%= field.label %></label>
+						<% if (field.options && field.options.length) { %>
+							<select id="profile-<%= key %>" name="profile-<%= key %>">
+								<option value="">Select</option>
+								<% field.options.forEach((option) => { %>
+									<option value="<%= option.value %>"><%= option.label %></option>
+								<% }) %>
+							</select>
+						<% } else if (field.input_type === "textarea") { %>
+							<textarea id="profile-<%= key %>" name="profile-<%= key %>" rows="3"><%= field.value ?? "" %></textarea>
+						<% } else if (typeof field.value === "boolean") { %>
+							<div class="checkbox-row">
+								<input type="checkbox" id="profile-<%= key %>" name="profile-<%= key %>" <%= field.value ? "checked" : "" %> />
+								<label for="profile-<%= key %>"><%= field.label %></label>
+							</div>
+						<% } else { %>
+							<input type="text" id="profile-<%= key %>" name="profile-<%= key %>" value="<%= field.value ?? "" %>" />
+						<% } %>
+					<% }) %>
+				</sui-content-box-inner>
+			</sui-content-box>
+
+			<sui-content-box>
+				<sui-content-box-title>Health</sui-content-box-title>
+				<sui-content-box-inner>
+					<% Object.entries(onboard_fields.health || {}).forEach(([key, field]) => { %>
+						<label for="health-<%= key %>"><%= field.label %></label>
+						<% if (field.options && field.options.length) { %>
+							<select id="health-<%= key %>" name="health-<%= key %>">
+								<option value="">Select</option>
+								<% field.options.forEach((option) => { %>
+									<option value="<%= option.value %>"><%= option.label %></option>
+								<% }) %>
+							</select>
+						<% } else if (field.input_type === "textarea") { %>
+							<textarea id="health-<%= key %>" name="health-<%= key %>" rows="3"><%= field.value ?? "" %></textarea>
+						<% } else if (typeof field.value === "boolean") { %>
+							<div class="checkbox-row">
+								<input type="checkbox" id="health-<%= key %>" name="health-<%= key %>" <%= field.value ? "checked" : "" %> />
+								<label for="health-<%= key %>"><%= field.label %></label>
+							</div>
+						<% } else { %>
+							<input type="text" id="health-<%= key %>" name="health-<%= key %>" value="<%= field.value ?? "" %>" />
+						<% } %>
+						<% if (field.notes) { %>
+							<small><%= field.notes %></small>
+						<% } %>
+					<% }) %>
+				</sui-content-box-inner>
+			</sui-content-box>
+
+			<sui-content-box>
+				<sui-content-box-title>Equipment Used</sui-content-box-title>
+				<sui-content-box-inner>
+					<% Object.entries(onboard_fields.equipment_used || {}).forEach(([key, field]) => { %>
+						<div class="checkbox-row">
+							<input type="checkbox" id="equipment-<%= key %>" name="equipment-<%= key %>" <%= field.value ? "checked" : "" %> />
+							<label for="equipment-<%= key %>"><%= field.label %></label>
+						</div>
+					<% }) %>
+				</sui-content-box-inner>
+			</sui-content-box>
+		</div>
+
+		<div class="resident-tools">
+			<a href="#" class="highlight disabled">Save Resident</a>
+			<a href="#" class="disabled">Cancel</a>
+		</div>
+	</form>
+</sui-contents>
+
+<style>
+	.onboard-form {
+		margin-top: 0;
+		width: 100%;
+	}
+	.subtitle {
+		color: var(--color-text-muted);
+		margin-top: 6px;
+	}
+	.onboard-grid {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		margin: 0px 0 20px;
+	}
+	.onboard-grid sui-content-box {
+		flex: 1 1 calc(33.33% - 20px);
+		min-width: 280px;
+		flex-grow: 1;
+	}
+	.onboard-grid label {
+		display: block;
+		font-weight: 600;
+		margin-top: 10px;
+	}
+	.onboard-grid small {
+		display: block;
+		color: var(--color-text-muted);
+		margin-top: 4px;
+	}
+	.onboard-grid input[type="text"],
+	.onboard-grid select,
+	.onboard-grid textarea {
+		width: 100%;
+	}
+	.checkbox-row {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin: 10px 0;
+	}
+</style>
+
+<script>
+	const firstInput = document.querySelector(".onboard-form input, .onboard-form select, .onboard-form textarea");
+	if (firstInput) {
+		firstInput.focus();
+	}
+</script>
+
+<%- include("./partials/foot") %>

@@ -363,6 +363,31 @@ app.post("/residents/:uuid/add-visit", async (req, res) => {
 
 });
 
+/**
+ * Render the "Onboard Patient"
+ * @param {import("express").Request} req
+ * @param {import("express").Response} res
+ * @returns {void}
+ */
+app.get("/onboard", async (req, res) => {
+	const apiResponse = await fetch(`${apiHost}/api/residents/onboard`);
+
+	if (!apiResponse.ok) {
+		res.status(502).render("404", { message: "Unable to load onboarding fields." });
+		return;
+	}
+
+	const payload = await apiResponse.json();
+	if (!payload || payload.success !== true || !payload.result) {
+		res.status(502).render("404", { message: "Unable to load onboarding fields." });
+		return;
+	}
+
+	res.render("onboard", {
+		onboard_fields: payload.result,
+	});
+});
+
 app.use("/api", createDemoApiRouter());
 
 app.listen(port, () => {

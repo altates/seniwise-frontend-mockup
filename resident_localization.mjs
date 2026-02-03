@@ -44,9 +44,18 @@ import { labels } from "./tools.mjs";
  * @property {Record<string, LocalizedField>} profile
  * @property {Record<string, LocalizedField>} health
  * @property {Record<string, LocalizedField>} equipment_used
- * @property {{ label: string, entries: Array<Record<string, LocalizedField>> }} update_log
- * @property {{ label: string, entries: LocalizedVisitEntry[] }} visits
- * @property {{ label: string, date: LocalizedField, relative: LocalizedField, display: string }} last_visit
+ * @property {{ label: string, entries: Array<Record<string, LocalizedField>> }=} update_log
+ * @property {{ label: string, entries: LocalizedVisitEntry[] }=} visits
+ * @property {{ label: string, date: LocalizedField, relative: LocalizedField, display: string }=} last_visit
+ */
+
+/**
+ * @typedef {Object} LocalizedResidentOptions
+ * @property {boolean=} excludeHidden
+ * @property {boolean=} excludeReadonly
+ * @property {boolean=} includeUpdateLog
+ * @property {boolean=} includeVisits
+ * @property {boolean=} includeLastVisit
  */
 
 /**
@@ -285,10 +294,18 @@ const resolveLabel = (labelKey, fallback) => {
 /**
  * Build the localized payload for a resident.
  * @param {Record<string, any>} resident
+ * @param {LocalizedResidentOptions=} options
  * @returns {LocalizedResident}
  */
-const buildLocalizedResident = (resident) => {
+const buildLocalizedResident = (resident, options = {}) => {
 	const profileSelectOptions = createProfileSelectOptions();
+	const normalizedOptions = {
+		excludeHidden: Boolean(options && options.excludeHidden),
+		excludeReadonly: Boolean(options && options.excludeReadonly),
+		includeUpdateLog: !options || options.includeUpdateLog !== false,
+		includeVisits: !options || options.includeVisits !== false,
+		includeLastVisit: !options || options.includeLastVisit !== false,
+	};
 	/** @type {Record<string, LocalizedField>} */
 	const profile = {};
 	const profileUuid =
@@ -306,6 +323,12 @@ const buildLocalizedResident = (resident) => {
 					: "",
 	};
 	for (const key of PROFILE_FIELD_ORDER) {
+		if (normalizedOptions.excludeHidden && PROFILE_HIDDEN_FIELDS.has(key)) {
+			continue;
+		}
+		if (normalizedOptions.excludeReadonly && PROFILE_READONLY_FIELDS.has(key)) {
+			continue;
+		}
 		const value = Object.prototype.hasOwnProperty.call(derivedProfileValues, key)
 			? derivedProfileValues[key]
 			: resident.profile
@@ -376,93 +399,108 @@ const buildLocalizedResident = (resident) => {
 	}
 
 	/** @type {Array<Record<string, LocalizedField>>} */
-	const updateLogEntries = Array.isArray(resident.update_log)
-		? [...resident.update_log]
-				.sort((a, b) => toTimestamp(b.date) - toTimestamp(a.date))
-				.map(
-				/** @param {Record<string, any>} entry */
-				(entry) => ({
-					date: {
-						value: formatDateDisplay(entry.date || "").display,
-						label: resolveLabel("update_log.date", "Date"),
-					},
-					user_id: {
-						value: entry.user_id || "",
-						label: resolveLabel("update_log.user_id", "User ID"),
-					},
-					fields: {
-						value: Array.isArray(entry.fields) ? entry.fields : [],
-						label: resolveLabel("update_log.fields", "Fields"),
-					},
-				})
-		  )
-		: [];
+	const updateLogEntries =
+		normalizedOptions.includeUpdateLog && Array.isArray(resident.update_log)
+			? [...resident.update_log]
+					.sort((a, b) => toTimestamp(b.date) - toTimestamp(a.date))
+					.map(
+					/** @param {Record<string, any>} entry */
+					(entry) => ({
+						date: {
+							value: formatDateDisplay(entry.date || "").display,
+							label: resolveLabel("update_log.date", "Date"),
+						},
+						user_id: {
+							value: entry.user_id || "",
+							label: resolveLabel("update_log.user_id", "User ID"),
+						},
+						fields: {
+							value: Array.isArray(entry.fields) ? entry.fields : [],
+							label: resolveLabel("update_log.fields", "Fields"),
+						},
+					})
+			  )
+			: [];
 
 	/** @type {LocalizedVisitEntry[]} */
-	const visitsEntries = Array.isArray(resident.visits)
-		? [...resident.visits]
-				.sort((a, b) => toTimestamp(b.date) - toTimestamp(a.date))
-				.map(
-				/** @param {Record<string, any>} entry */
-				(entry) => {
-					const displayDate = formatDateDisplay(entry.date || "").display;
-					const actions = Array.isArray(entry.actions)
-						? entry.actions.map(
-								/** @param {{ key: string, value?: string }} action */
-								(action) => {
-									const meta = VISIT_ACTION_LOOKUP.get(action.key);
-									const value =
-										typeof action.value === "string"
-											? action.value
-											: meta && meta.type === "boolean"
-												? true
-												: "";
-									return {
-										key: action.key,
-										label: resolveLabel(meta ? meta.label_key : "", action.key),
-										value,
-										category: meta ? resolveLabel(meta.category_label_key, "") : "",
-										group: meta && meta.group_label_key
-											? resolveLabel(meta.group_label_key, "")
-											: "",
-									};
-								}
-						  )
-						: [];
-					return {
-						date: {
-							value: displayDate,
-							label: resolveLabel("visits.date", "Date"),
-						},
-						caretaker: {
-							value: entry.caretaker || "",
-							label: resolveLabel("visits.caretaker", "Caretaker"),
-						},
-						actions: {
-							label: resolveLabel("visits.actions", "Actions"),
-							items: actions,
-						},
-					};
-				}
-		  )
-		: [];
+	const visitsEntries =
+		normalizedOptions.includeVisits && Array.isArray(resident.visits)
+			? [...resident.visits]
+					.sort((a, b) => toTimestamp(b.date) - toTimestamp(a.date))
+					.map(
+					/** @param {Record<string, any>} entry */
+					(entry) => {
+						const displayDate = formatDateDisplay(entry.date || "").display;
+						const actions = Array.isArray(entry.actions)
+							? entry.actions.map(
+									/** @param {{ key: string, value?: string }} action */
+									(action) => {
+										const meta = VISIT_ACTION_LOOKUP.get(action.key);
+										const value =
+											typeof action.value === "string"
+												? action.value
+												: meta && meta.type === "boolean"
+													? true
+													: "";
+										return {
+											key: action.key,
+											label: resolveLabel(meta ? meta.label_key : "", action.key),
+											value,
+											category: meta ? resolveLabel(meta.category_label_key, "") : "",
+											group: meta && meta.group_label_key
+												? resolveLabel(meta.group_label_key, "")
+												: "",
+										};
+									}
+							  )
+							: [];
+						return {
+							date: {
+								value: displayDate,
+								label: resolveLabel("visits.date", "Date"),
+							},
+							caretaker: {
+								value: entry.caretaker || "",
+								label: resolveLabel("visits.caretaker", "Caretaker"),
+							},
+							actions: {
+								label: resolveLabel("visits.actions", "Actions"),
+								items: actions,
+							},
+						};
+					}
+			  )
+			: [];
 
-	const lastVisit = buildLastVisitSummary(resident.visits);
+	const lastVisit = normalizedOptions.includeLastVisit
+		? buildLastVisitSummary(resident.visits)
+		: null;
 
-	return {
+	const payload = {
 		profile,
 		health,
 		equipment_used,
-		update_log: {
+	};
+
+	if (normalizedOptions.includeUpdateLog) {
+		payload.update_log = {
 			label: resolveLabel("update_log", "Update Log"),
 			entries: updateLogEntries,
-		},
-		visits: {
+		};
+	}
+
+	if (normalizedOptions.includeVisits) {
+		payload.visits = {
 			label: resolveLabel("visits", "Visits"),
 			entries: visitsEntries,
-		},
-		last_visit: lastVisit,
-	};
+		};
+	}
+
+	if (normalizedOptions.includeLastVisit && lastVisit) {
+		payload.last_visit = lastVisit;
+	}
+
+	return payload;
 };
 
 export { buildLocalizedResident };

@@ -440,6 +440,35 @@ const createDemoApiRouter = () => {
 	});
 
 	/**
+	 * Return onboarding field metadata for residents.
+	 * @param {import("express").Request} req
+	 * @param {import("express").Response} res
+	 * @returns {void}
+	 */
+	router.get("/residents/onboard", (req, res) => {
+		const localized = buildLocalizedResident(
+			{ profile: {}, health: {}, equipment_used: {} },
+			{
+				excludeHidden: true,
+				excludeReadonly: true,
+				includeUpdateLog: false,
+				includeVisits: false,
+				includeLastVisit: false,
+			}
+		);
+
+		if (localized.profile && Object.prototype.hasOwnProperty.call(localized.profile, "location")) {
+			delete localized.profile.location;
+		}
+
+		res.json({
+			success: true,
+			error: null,
+			result: localized,
+		});
+	});
+
+	/**
 	 * Return resident details as an API response.
 	 * @param {import("express").Request} req
 	 * @param {import("express").Response} res
