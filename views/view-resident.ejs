@@ -6,41 +6,48 @@
 	<%- include("./partials/nav-avatar"); %>
 </sui-navigation>
 
-<sui-contents class="padded resident-hero">
-	<%
-		const profile = resident.profile || {};
-		const photoSrc = profile.image?.value || "/media/default-avatar.png";
-		const statusLabel = profile.active?.label || "Status";
-		const statusValue = profile.active?.value ? "Active" : "Inactive";
-		const createdAtLabel = profile.created_at?.label || "Created";
-		const createdAtValue = profile.created_at?.value ?? "";
-		const createdByValue = profile.created_by?.value ?? "";
-		const updatedAtLabel = profile.updated_at?.label || "Updated";
-		const updatedAtValue = profile.updated_at?.value ?? "";
-		const updatedByValue = profile.updated_by?.value ?? "";
-		const lastVisitLabel = resident.last_visit?.label || "Last Visit";
-		const lastVisitValue = resident.last_visit?.display || "-";
-		const createdAtRelative = tools.formatRelative(createdAtValue);
-		const updatedAtRelative = tools.formatRelative(updatedAtValue);
-		const hiddenProfileKeys = [
-			"location",
-			"created_at",
-			"created_by",
-			"updated_at",
-			"updated_by",
-		];
-	%>
-	<div class="resident-hero-main">
-		<div class="resident-photo">
-			<img src="<%= photoSrc %>" alt="<%= resident_name %>">
-		</div>
-		<div class="resident-tools">
-			<a href="/residents/<%- resident.profile.uuid.value %>/add-visit" class="highlight"><i class="fa-solid fa-plus"></i> Add Visit</a>
-			<a href="#" class="disabled">Save Changes</a>
-			<a href="#" class="">Export</a>
-			<a href="#" class="">Print</a>
-			<a href="#" class="dangerous">Delete</a>
-		</div>
+<style>
+	.resident-grid sui-content-box {
+		flex-basis: calc(33.33% - 20px);
+		flex-grow: 1;
+	}
+</style>
+
+<%
+	const profile = resident.profile || {};
+	const photoSrc = profile.image?.value || "/media/default-avatar.png";
+	const statusLabel = profile.active?.label || "Status";
+	const statusValue = profile.active?.value ? "Active" : "Inactive";
+	const createdAtLabel = profile.created_at?.label || "Created";
+	const createdAtValue = profile.created_at?.value ?? "";
+	const createdByValue = profile.created_by?.value ?? "";
+	const updatedAtLabel = profile.updated_at?.label || "Updated";
+	const updatedAtValue = profile.updated_at?.value ?? "";
+	const updatedByValue = profile.updated_by?.value ?? "";
+	const lastVisitLabel = resident.last_visit?.label || "Last Visit";
+	const lastVisitValue = resident.last_visit?.display || "-";
+	const createdAtRelative = tools.formatRelative(createdAtValue);
+	const updatedAtRelative = tools.formatRelative(updatedAtValue);
+	const hiddenProfileKeys = [
+		"location",
+		"created_at",
+		"created_by",
+		"updated_at",
+		"updated_by",
+	];
+%>
+
+<sui-contents class="padded toolbox">
+	<a href="/residents/<%- resident.profile.uuid.value %>/add-visit" class="highlight"><i class="fa-solid fa-plus"></i> Add Visit</a>
+	<a href="#" class="disabled">Save Changes</a>
+	<a href="#" class="hide-on-mobile">Export</a>
+	<a href="#" class="hide-on-mobile">Print</a>
+	<a href="#" class="dangerous hide-on-mobile">Delete</a>
+</sui-contents>
+
+<sui-contents class="padded">
+	<div class="resident-photo">
+		<img src="<%= photoSrc %>" alt="<%= resident_name %>">
 	</div>
 	<div class="resident-hero-meta">
 		<div class="resident-meta-card">

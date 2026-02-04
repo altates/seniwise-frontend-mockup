@@ -227,7 +227,7 @@
 			}
 
 			const headerRow = document.createElement("sui-tr");
-			this.columns.forEach((column) => {
+			this.columns.forEach((column, idx) => {
 				const headerCell = document.createElement("sui-th");
 				if (column.sortable) {
 					const sortButton = document.createElement("button");
@@ -252,6 +252,9 @@
 					headerCell.appendChild(sortButton);
 				} else {
 					headerCell.textContent = column.label;
+				}
+				if (idx != 0) {
+					headerCell.classList.add("hide-on-mobile");
 				}
 				headerRow.appendChild(headerCell);
 			});
@@ -282,7 +285,7 @@
 			} else {
 				this.items.forEach((row) => {
 					const bodyRow = document.createElement("sui-tr");
-					this.columns.forEach((column) => {
+					this.columns.forEach((column, idx) => {
 						const bodyCell = document.createElement("sui-td");
 						const value = row[column.key];
 						const textValue =
@@ -298,6 +301,9 @@
 							bodyCell.appendChild(link);
 						} else {
 							bodyCell.textContent = textValue;
+						}
+						if (idx != 0) {
+							bodyCell.classList.add("hide-on-mobile");
 						}
 						bodyRow.appendChild(bodyCell);
 					});

@@ -149,14 +149,12 @@
 	}
 </style>
 
+<sui-contents class="padded toolbox">
+	<a href="#" class="disabled"><%- locals.labels("visits.add.submit")  %></a>
+</sui-contents>
+
 <sui-contents class="padded">
 	<form autocomplete="off">
-
-	<h1><%- locals.labels("visits.add.title") %></h1>
-	<h2><%- locals.labels("visits.add.subtitle") %></h2>
-	<div class="resident-tools" style="margin-top: 20px;">
-		<a href="#" class="disabled"><%- locals.labels("visits.add.submit")  %></a>
-	</div>
 	<div class="categories">
 	<% visit_categories.forEach((category) => { %>
 		<div class="category-box">

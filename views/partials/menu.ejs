@@ -12,28 +12,32 @@
 		},
 		{
 			"icon": "fa-person-circle-plus",
-			"text": "Onboard Resident",
+			"text": "Onboard",
 			"path": "/onboard",
 		},
 		{
 			"icon": "fa-download",
 			"text": "Import / Export",
 			"path": "/import-export",
+			"disable": true,
 		},
 		{
 			"icon": "fa-bell",
-			"text": "Notifications",
+			"text": "Alerts",
 			"path": "/notifications",
+			"disable": true,
 		},
 		{
 			"icon": "fa-user-tie",
 			"text": "Administration",
 			"path": "/administration",
+			"disable": true,
 		},
 		{
 			"icon": "fa-gear",
 			"text": "Settings",
 			"path": "/settings",
+			"disable": true,
 		}
 	]
 %>
@@ -43,8 +47,9 @@
 		const hasPath = typeof locals.current_path === "string";
 		const isRoot = item.path === "/";
 		const isSelected = hasPath && (isRoot ? locals.current_path === "/" : locals.current_path.startsWith(item.path));
+		const disableTag = item.disable == true ? "disabled" : ""
 	%>
-	<a href="<%= item.path %>" class="<%= isSelected ? "selected" : "" %>">
+	<a href="<%= item.path %>" class="<%= isSelected ? "selected" : "" %> <%- disableTag %>">
 		<i class="fa-solid <%= item.icon %>"></i>
 		<p><%= item.text %></p>
 	</a>
